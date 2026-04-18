@@ -2,8 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>ReFood</title>
+    <title>Pago - ReFood</title>
 </head>
+
 <body>
 
 <header>
@@ -13,42 +14,50 @@
     </h1>
     <p><strong>Rescatando comida, alimentando personas.</strong></p>
 
-    <nav>
-        <a href="login.html">👤 Login</a>
-    </nav>
+    
 </header>
 
 <hr>
 
+<h2>💳 Proceso de Pago</h2>
 
+<p>Completa los datos para finalizar tu compra.</p>
 
-<h2>📝 Registro de Usuario</h2>
+<form action="index.html" method="get">
 
-<form>
-    <label>Nombre completo:</label><br>
-    <input type="text"><br><br>
+    <label>💳 Método de pago:</label><br>
+    <select required>
+        <option disabled selected>Seleccione un método</option>
+        <option>Tarjeta de crédito</option>
+        <option>Tarjeta de débito</option>
+        <option>Yape</option>
+        <option>Plin</option>
+        <option>Efectivo contra entrega</option>
+    </select><br><br>
 
-    <label>Correo electrónico:</label><br>
-    <input type="email"><br><br>
+    <label>👤 Nombre en la tarjeta:</label><br>
+    <input type="text" placeholder="Ingrese nombre" required><br><br>
 
-    <label>Contraseña:</label><br>
-    <input type="password"><br><br>
+    <label>🔢 Número de tarjeta:</label><br>
+    <input type="text" placeholder="XXXX-XXXX-XXXX-XXXX" required><br><br>
 
-    <label>Confirmar contraseña:</label><br>
-    <input type="password"><br><br>
+    <label>📅 Fecha de vencimiento:</label><br>
+    <input type="month" required><br><br>
 
-    <button>Registrar</button>
+    <label>🔒 CVV:</label><br>
+    <input type="password" placeholder="123" required><br><br>
+
+    <button type="submit">Pagar</button>
+
 </form>
 
 <br>
-<a href="login.html">Volver a iniciar sesión</a>
 
+<a href="form_pedido.html">← Volver al pedido</a>
 
 <hr>
 
 <footer>
-    
-    <hr>
 
     <p>📧 contacto@refood.com</p>
     <p><img src="https://res-console.cloudinary.com/dk25vjxwa/thumbnails/transform/v1/image/upload/Y19maWxsLGhfMjAwLHdfMjAw/v1/d2hhdHNhcHBfb3ZramNv/template_primary" alt="Logo ReFood" width="30"> +51 987 654 321</p>

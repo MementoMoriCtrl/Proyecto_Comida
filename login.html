@@ -2,49 +2,86 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>UniComida</title>
+    <title>ReFood</title>
+
+    <meta name="description" content="Plataforma para reducir el desperdicio de alimentos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 
 <header>
-    <h1>🍽️ UniComida</h1>
-    <p>Reduciendo el desperdicio de alimentos</p>
+    <h1>
+    <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/f_auto,q_auto/logo1_tucovp" alt="Logo ReFood" width="120">
+    ReFood
+    </h1>
+    <p><strong>Rescatando comida, alimentando personas.</strong></p>
 
-<nav>
-    <a href="index.html">🏠 Inicio</a> |
-    <a href="menu.html">🍔 Menú</a> |
-    <a href="form_pedido.html">🛒 Nuevo Pedido</a> |
-    <a href="ofertas.html">🔥 Ofertas</a> |
-    <a href="pedidos.html">📊 Pedidos Realizados</a> |
-    <a href="login.html">🔐 Login</a>
-</nav>
+    <nav>
+        <a href="login.html">👤 Login</a>
+    </nav>
 </header>
 
 <hr>
 
+<main>
 
-<h2>🔐 Iniciar Sesión</h2>
+    <h2>🔐 Accede a tu cuenta</h2>
 
-<form>
-    <label>Usuario:</label><br>
-    <input type="text" placeholder="Ingrese su usuario"><br><br>
+    <p>Ingresa tus datos para acceder y realizar pedidos.</p>
 
-    <label>Contraseña:</label><br>
-    <input type="password" placeholder="Ingrese su contraseña"><br><br>
+    <form action="index.html" method="get">
+        <fieldset>
+            <legend>Datos de acceso</legend>
 
-    <button type="submit">Ingresar</button>
-</form>
+            <label>👤 Usuario:</label><br>
+            <input type="text" placeholder="Ingrese su usuario" required><br><br>
 
-<br>
-<a href="registrar.html">¿No tienes cuenta? Regístrate</a>
+            <label>🔒 Contraseña:</label><br>
+            <input type="password" placeholder="Ingrese su contraseña" required><br><br>
 
+            <input type="checkbox"> Recordar mi sesión<br><br>
 
+            <button type="submit">Ingresar</button>
+        </fieldset>
+    </form>
+
+    <p>
+    <a href="recuperar.html" target="_blank">
+        ¿Olvidaste tu contraseña?
+    </a>
+    </p>
+
+    <p>¿No tienes cuenta? <a href="registrar.html">Regístrate</a></p>
+
+</main>
 
 <hr>
 
 <footer>
-    <p>📧 contacto@unicomida.com</p>
-    <p>📱 Síguenos en redes sociales</p>
+    
+
+    <p>📧 contacto@refood.com</p>
+    <p><img src="https://res-console.cloudinary.com/dk25vjxwa/thumbnails/transform/v1/image/upload/Y19maWxsLGhfMjAwLHdfMjAw/v1/d2hhdHNhcHBfb3ZramNv/template_primary" alt="Logo ReFood" width="30"> +51 987 654 321</p>
+
+    <p>📍 Lima, Perú</p>
+
+    <p>
+        📱 Síguenos en redes:
+        <a href="#">Facebook</a> |
+        <a href="#">Instagram</a> |
+        <a href="#">TikTok</a>
+    </p>
+
+    <p>
+        <a href="#">Términos y condiciones</a> |
+        <a href="#">Política de privacidad</a>
+    </p>
+
+    <p>🕒 Atención: Lunes a Domingo 9:00 am - 9:00 pm</p>
+
+    <p>© 2026 ReFood - Todos los derechos reservados</p>
+
 </footer>
 
 </body>
