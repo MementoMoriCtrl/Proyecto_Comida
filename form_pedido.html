@@ -2,21 +2,54 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>UniComida</title>
+    <title>ReFood</title>
 </head>
 <body>
 
 <header>
-    <h1>🍽️ UniComida</h1>
-    <p>Reduciendo el desperdicio de alimentos</p>
+    <h1>
+    <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/f_auto,q_auto/logo1_tucovp" alt="Logo ReFood" width="120">
+    ReFood
+    </h1>
+    <p><strong>Rescatando comida, alimentando personas.</strong></p>
 
+    <!-- BARRA DE NAV -->
     <nav>
-        <a href="index.html">🏠 Inicio</a> |
-        <a href="menu.html">🍔 Menú</a> |
-        <a href="form_pedido.html">🛒 Nuevo Pedido</a> |
-        <a href="ofertas.html">🔥 Ofertas</a> |
-        <a href="pedidos.html">📊 Pedidos Realizados</a> |
-        <a href="login.html">🔐 Login</a>
+        <br>
+
+        <font size="5">
+
+        <a href="index.html">
+            <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776561543/home-button_qnpohv.png" width="25"> Inicio
+        </a> &nbsp;&nbsp;&nbsp;|
+
+        <a href="menu.html">
+            <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776561625/menu_qairwh.png" width="25"> Menú
+        </a> &nbsp;&nbsp;&nbsp;|
+
+        <a href="form_pedido.html">
+            <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" width="25"> Nuevo Pedido
+        </a> &nbsp;&nbsp;&nbsp;|
+
+        <a href="ofertas.html">
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" width="25"> Ofertas
+        </a> &nbsp;&nbsp;&nbsp;|
+
+        <a href="pedidos.html">
+            <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776564487/checklist_pkwoee.png" width="25"> Pedidos Realizados
+        </a> &nbsp;&nbsp;&nbsp;|
+
+        <a href="impacto.html">
+            <img src="https://cdn-icons-png.flaticon.com/512/2909/2909765.png" width="25"> Impacto
+        </a> &nbsp;&nbsp;&nbsp;|
+
+        <a href="login.html">
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" width="25"> Login
+        </a>
+
+        </font>
+
+        <br><br>
     </nav>
 </header>
 
@@ -26,38 +59,168 @@
 
 <h2>📦 Realizar Pedido</h2>
 
-<form>
+<table>
+<tr>
+
+<!-- FORMULARIO -->
+<td>
+
+<form action="pago.html" method="get">
+
     <label>Nombre del cliente:</label><br>
-    <input type="text"><br><br>
+    <input type="text" required><br><br>
 
     <label>Dirección:</label><br>
-    <input type="text"><br><br>
+    <input type="text" required><br><br>
 
     <label>Teléfono:</label><br>
-    <input type="text"><br><br>
+    <input type="text" required><br><br>
 
-    <label>Seleccionar plato:</label><br>
-    <select>
-        <option>Pollo a la brasa</option>
-        <option>Arroz Chaufa</option>
-        <option>Hamburguesa</option>
-    </select><br><br>
+    <h4>
+        <font size="5">🍽️ Arma tu pedido:</font>
+    </h4>
 
-    <label>Cantidad:</label><br>
-    <input type="number" min="1"><br><br>
+<table>
 
+<tr>
+<td>Plato:</td>
+<td>
+<select>
+<option disabled selected>Seleccione</option>
+<option>Pollo a la brasa</option>
+<option>Arroz Chaufa</option>
+<option>Hamburguesa</option>
+<option>Lomo Saltado</option>
+<option>Ají de Gallina</option>
+<option>Tallarines Verdes</option>
+<option>Pizza Familiar</option>
+<option>Salchipapas</option>
+<option>Ceviche</option>
+<option>Chicharrón de pollo</option>
+<option>Broaster</option>
+<option>Ensalada César</option>
+<option>Hot Dog</option>
+<option>Empanadas</option>
+<option>Arroz con Pollo</option>
+</select>
+</td>
+
+<td>&nbsp;&nbsp;&nbsp;</td>
+
+<td>Cantidad:</td>
+<td><input type="number" min="1"></td>
+</tr>
+
+<tr><td><br></td></tr> <!-- ESPACIO -->
+
+<tr>
+<td>Plato:</td>
+<td>
+<select>
+<option disabled selected>Seleccione</option>
+<option>Pollo a la brasa</option>
+<option>Arroz Chaufa</option>
+<option>Hamburguesa</option>
+<option>Lomo Saltado</option>
+<option>Ají de Gallina</option>
+<option>Tallarines Verdes</option>
+<option>Pizza Familiar</option>
+<option>Salchipapas</option>
+<option>Ceviche</option>
+<option>Chicharrón de pollo</option>
+<option>Broaster</option>
+<option>Ensalada César</option>
+<option>Hot Dog</option>
+<option>Empanadas</option>
+<option>Arroz con Pollo</option>
+</select>
+</td>
+
+<td>&nbsp;&nbsp;&nbsp;</td>
+
+<td>Cantidad:</td>
+<td><input type="number" min="1"></td>
+</tr>
+
+<tr><td><br></td></tr> <!-- ESPACIO -->
+
+<tr>
+<td>Plato:</td>
+<td>
+<select>
+<option disabled selected>Seleccione</option>
+<option>Pollo a la brasa</option>
+<option>Arroz Chaufa</option>
+<option>Hamburguesa</option>
+<option>Lomo Saltado</option>
+<option>Ají de Gallina</option>
+<option>Tallarines Verdes</option>
+<option>Pizza Familiar</option>
+<option>Salchipapas</option>
+<option>Ceviche</option>
+<option>Chicharrón de pollo</option>
+<option>Broaster</option>
+<option>Ensalada César</option>
+<option>Hot Dog</option>
+<option>Empanadas</option>
+<option>Arroz con Pollo</option>
+</select>
+</td>
+
+<td>&nbsp;&nbsp;&nbsp;</td>
+
+<td>Cantidad:</td>
+<td><input type="number" min="1"></td>
+</tr>
+<tr><td><br></td></tr>
+</table>
     <button type="submit">Enviar Pedido</button>
+
 </form>
+
+</td>
+
+<!-- GIF -->
+<td>
+    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWoxZ3BtZWpmZnQ2NHlzeW8yNDFwbmZ4ZjU4cXFxMGw5cm9tYnBmNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CT903eXpAYGmdLitd5/giphy.gif" 
+         alt="Pedido comida" width="350">
+</td>
+
+</tr>
+</table>
 
 <br>
 <a href="menu.html">← Volver al menú</a>
+<a href="index.html">← Volver al inicio</a>
 
 
 <hr>
 
 <footer>
-    <p>📧 contacto@unicomida.com</p>
-    <p>📱 Síguenos en redes sociales</p>
+    
+    <hr>
+
+    <p>📧 contacto@refood.com</p>
+    <p><img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776476222/whatsapp_ovkjco.png" alt="Logo ReFood" width="30"> +51 987 654 321</p>
+
+    <p><img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776564974/google-maps_gayzto.png" width="30"> Lima, Perú</p>
+
+    <p>
+        📱 Síguenos en redes:
+        <a href="#">Facebook</a> |
+        <a href="#">Instagram</a> |
+        <a href="#">TikTok</a>
+    </p>
+
+    <p>
+        <a href="terminos.html">Términos y condiciones</a> |
+        <a href="privacidad.html">Política de privacidad</a>
+    </p>
+
+    <p>🕒 Atención: Lunes a Domingo 9:00 am - 9:00 pm</p>
+
+    <p>© 2026 ReFood - Todos los derechos reservados</p>
+
 </footer>
 
 </body>

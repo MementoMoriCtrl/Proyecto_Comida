@@ -2,28 +2,67 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>UniComida</title>
+    <title>ReFood</title>
 </head>
 <body>
 
 <header>
-    <h1>🍽️ UniComida</h1>
-    <p>Reduciendo el desperdicio de alimentos</p>
+    <h1>
+    <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/f_auto,q_auto/logo1_tucovp" alt="Logo ReFood" width="120">
+    ReFood
+    </h1>
+    <p><strong>Rescatando comida, alimentando personas.</strong></p>
 
+    <!-- NAV MEJORADO -->
     <nav>
-        <a href="index.html">🏠 Inicio</a> |
-        <a href="menu.html">🍔 Menú</a> |
-        <a href="form_pedido.html">🛒 Nuevo Pedido</a> |
-        <a href="ofertas.html">🔥 Ofertas</a> |
-        <a href="pedidos.html">📊 Pedidos Realizados</a> |
-        <a href="login.html">🔐 Login</a>
+        <br>
+
+        <font size="5">
+
+        <a href="index.html">
+            <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776561543/home-button_qnpohv.png" width="25"> Inicio
+        </a> &nbsp;&nbsp;&nbsp;|
+
+        <a href="menu.html">
+            <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776561625/menu_qairwh.png" width="25"> Menú
+        </a> &nbsp;&nbsp;&nbsp;|
+
+        <a href="form_pedido.html">
+            <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" width="25"> Nuevo Pedido
+        </a> &nbsp;&nbsp;&nbsp;|
+
+        <a href="ofertas.html">
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" width="25"> Ofertas
+        </a> &nbsp;&nbsp;&nbsp;|
+
+        <a href="pedidos.html">
+            <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776564487/checklist_pkwoee.png" width="25"> Pedidos Realizados
+        </a> &nbsp;&nbsp;&nbsp;|
+
+        <a href="impacto.html">
+            <img src="https://cdn-icons-png.flaticon.com/512/2909/2909765.png" width="25"> Impacto
+        </a> &nbsp;&nbsp;&nbsp;|
+
+        <a href="login.html">
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" width="25"> Login
+        </a>
+
+        </font>
+
+        <br><br>
     </nav>
 </header>
 
 <hr>
 
-
 <h2>🍔 Menú de Comidas</h2>
+
+<!-- CONTENEDOR -->
+<table>
+<tr>
+
+<!-- TABLA DEL MENÚ -->
+<td>
 
 <table border="1">
     <tr>
@@ -39,7 +78,11 @@
         <td>Incluye papas y ensalada</td>
         <td>S/ 25</td>
         <td>S/ 15</td>
-        <td><button>Añadir</button></td>
+        <td>
+            <form action="form_pedido.html">
+                <button type="submit">Añadir al Pedido</button>
+            </form>
+        </td>
     </tr>
 
     <tr>
@@ -47,7 +90,11 @@
         <td>Porción grande</td>
         <td>S/ 18</td>
         <td>S/ 10</td>
-        <td><button>Añadir</button></td>
+        <td>
+            <form action="form_pedido.html">
+                <button type="submit">Añadir al Pedido</button>
+            </form>
+        </td>
     </tr>
 
     <tr>
@@ -55,17 +102,194 @@
         <td>Con papas fritas</td>
         <td>S/ 20</td>
         <td>S/ 12</td>
-        <td><button>Añadir</button></td>
+        <td>
+            <form action="form_pedido.html">
+                <button type="submit">Añadir al Pedido</button>
+            </form>
+        </td>
     </tr>
+
+    <tr>
+        <td>Lomo Saltado</td>
+        <td>Carne con papas y arroz</td>
+        <td>S/ 22</td>
+        <td>S/ 14</td>
+        <td>
+            <form action="form_pedido.html">
+                <button type="submit">Añadir al Pedido</button>
+            </form>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Ají de Gallina</td>
+        <td>Crema de pollo</td>
+        <td>S/ 20</td>
+        <td>S/ 13</td>
+        <td>
+            <form action="form_pedido.html">
+                <button type="submit">Añadir al Pedido</button>
+            </form>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Tallarines Verdes</td>
+        <td>Pasta con albahaca</td>
+        <td>S/ 18</td>
+        <td>S/ 11</td>
+        <td>
+            <form action="form_pedido.html">
+                <button type="submit">Añadir al Pedido</button>
+            </form>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Pizza Familiar</td>
+        <td>Pizza mixta</td>
+        <td>S/ 30</td>
+        <td>S/ 18</td>
+        <td>
+            <form action="form_pedido.html">
+                <button type="submit">Añadir al Pedido</button>
+            </form>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Salchipapas</td>
+        <td>Papas con salchicha</td>
+        <td>S/ 12</td>
+        <td>S/ 7</td>
+        <td>
+            <form action="form_pedido.html">
+                <button type="submit">Añadir al Pedido</button>
+            </form>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Ceviche</td>
+        <td>Pescado fresco</td>
+        <td>S/ 25</td>
+        <td>S/ 16</td>
+        <td>
+            <form action="form_pedido.html">
+                <button type="submit">Añadir al Pedido</button>
+            </form>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Chicharrón</td>
+        <td>Pollo crocante</td>
+        <td>S/ 20</td>
+        <td>S/ 12</td>
+        <td>
+            <form action="form_pedido.html">
+                <button type="submit">Añadir al Pedido</button>
+            </form>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Broaster</td>
+        <td>Pollo frito</td>
+        <td>S/ 18</td>
+        <td>S/ 11</td>
+        <td>
+            <form action="form_pedido.html">
+                <button type="submit">Añadir al Pedido</button>
+            </form>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Ensalada César</td>
+        <td>Lechuga y pollo</td>
+        <td>S/ 15</td>
+        <td>S/ 9</td>
+        <td>
+            <form action="form_pedido.html">
+                <button type="submit">Añadir al Pedido</button>
+            </form>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Hot Dog</td>
+        <td>Pan con salchicha</td>
+        <td>S/ 10</td>
+        <td>S/ 6</td>
+        <td>
+            <form action="form_pedido.html">
+                <button type="submit">Añadir al Pedido</button>
+            </form>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Empanadas</td>
+        <td>Carne o pollo</td>
+        <td>S/ 8</td>
+        <td>S/ 5</td>
+        <td>
+            <form action="form_pedido.html">
+                <button type="submit">Añadir al Pedido</button>
+            </form>
+        </td>
+    </tr>
+
+    <tr>
+        <td>Arroz con Pollo</td>
+        <td>Arroz verde</td>
+        <td>S/ 17</td>
+        <td>S/ 10</td>
+        <td>
+            <form action="form_pedido.html">
+                <button type="submit">Añadir al Pedido</button>
+            </form>
+        </td>
+    </tr>
+
 </table>
 
+</td>
 
+<!-- GIF -->
+<td>
+    <h3></h3>
+    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXNtMjZ0bTBxMmxmcXNkOTQ2a29nNzJzdTdieXF2d241endmc2x1aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5ag7ZoSXeuQMXNealA/giphy.gif" width="600">
+</td>
+
+</tr>
+</table>
 
 <hr>
 
 <footer>
-    <p>📧 contacto@unicomida.com</p>
-    <p>📱 Síguenos en redes sociales</p>
+    <p>📧 contacto@refood.com</p>
+    <p>
+        <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776476222/whatsapp_ovkjco.png" width="30">
+        +51 987 654 321
+    </p>
+    <p><img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776564974/google-maps_gayzto.png" width="30"> Lima, Perú</p>
+
+    <p>
+        📱 Síguenos en redes:
+        <a href="#">Facebook</a> |
+        <a href="#">Instagram</a> |
+        <a href="#">TikTok</a>
+    </p>
+
+    <p>
+    <a href="terminos.html">Términos y condiciones</a> |
+    <a href="privacidad.html">Política de privacidad</a>
+    </p>
+
+    <p>🕒 Atención: Lunes a Domingo 9:00 am - 9:00 pm</p>
+    <p>© 2026 ReFood</p>
 </footer>
 
 </body>
