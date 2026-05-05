@@ -3,92 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <title>ReFood</title>
+
+    <style>
+
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin:0;
+        background:#f9fafa;
+    }
+
+    /* HEADER */
+
+    header{
+        background:rgb(244, 237, 166);
+        padding:20px;
+        text-align:center;
+        box-shadow:0 2px 10px rgba(252, 253, 214, 0.1);
+    }
+
+    header h1{
+        color:#1f7a4c;
+        font-size:40px;
+    }
+
+    header p{
+        color:#666;
+    }
+
+    /* NAV */
+
+    nav{
+        margin-top:10px;
+    }
+
+    nav a{
+        text-decoration:none;
+        color:#333;
+        font-weight:bold;
+        padding:10px 18px;
+        border-radius:8px;
+        transition:0.3s;
+    }
+
+    nav a:hover{
+        background:#1f7a4c;
+        color:white;
+    }
+
+    /* TITULO */
+
+    h2{
+        text-align:center;
+        color:#0d904e;
+        margin-top:40px;
+    }
+
+    /* CONTENEDOR */
+
+    table{
+        margin:auto;
+    }
+
+    /* TABLA PEDIDOS */
+
+    table[border]{
+        border-collapse:collapse;
+        background:white;
+        box-shadow:0 4px 15px rgba(253, 249, 204, 0.08);
+        border-radius:10px;
+        overflow:hidden;
+    }
+
+    th{
+        background:#f5edb1;
+        color:rgb(45, 10, 10);
+        padding:12px;
+    }
+
+    td{
+        padding:10px 15px;
+        text-align:center;
+    }
+
+    tr:nth-child(even){
+        background:#f2f7f4;
+    }
+
+    tr:hover{
+        background:#faf9e4;
+    }
+
+    /* LINKS */
+
+    a{
+        color:#0c693a;
+        font-weight:bold;
+        text-decoration:none;
+    }
+
+    a:hover{
+        text-decoration:underline;
+    }
+
+    /* FOOTER */
+
+    footer{
+        background:#f4f1ae;
+        color:rgb(45, 40, 40);
+        text-align:center;
+        padding:25px;
+        margin-top:40px;
+    }
+
+    footer a{
+        color:rgb(43, 116, 14);
+    }
+
+    footer img{
+        vertical-align:middle;
+    }
+
+</style>
+
 </head>
+
 <body>
 
 <header>
-    <h1>
-    <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/f_auto,q_auto/logo1_tucovp" alt="Logo ReFood" width="120">
+
+<h1>
+    <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/f_auto,q_auto/logo1_tucovp" width="120">
     ReFood
-    </h1>
+</h1>
+
     <p><strong>Rescatando comida, alimentando personas.</strong></p>
 
-    <!-- NAV MEJORADO -->
-    <nav>
-        <br>
+<nav>
 
-        <font size="5">
+<a href="index.html">Inicio</a> |
+<a href="menu.html">Menú</a> |
+<a href="form_pedido.html">Nuevo Pedido</a> |
+<a href="ofertas.html">Ofertas</a> |
+<a href="pedidos.html">Pedidos Realizados</a> |
+<a href="impacto.html">Impacto</a> |
+<a href="login.html">Login</a>
 
-        <a href="index.html">
-            <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776561543/home-button_qnpohv.png" width="25"> Inicio
-        </a> &nbsp;&nbsp;&nbsp;|
+</nav>
 
-        <a href="menu.html">
-            <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776561625/menu_qairwh.png" width="25"> Menú
-        </a> &nbsp;&nbsp;&nbsp;|
-
-        <a href="form_pedido.html">
-            <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" width="25"> Nuevo Pedido
-        </a> &nbsp;&nbsp;&nbsp;|
-
-        <a href="ofertas.html">
-            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" width="25"> Ofertas
-        </a> &nbsp;&nbsp;&nbsp;|
-
-        <a href="pedidos.html">
-            <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776564487/checklist_pkwoee.png" width="25"> Pedidos Realizados
-        </a> &nbsp;&nbsp;&nbsp;|
-
-        <a href="impacto.html">
-            <img src="https://cdn-icons-png.flaticon.com/512/2909/2909765.png" width="25"> Impacto
-        </a> &nbsp;&nbsp;&nbsp;|
-
-        <a href="login.html">
-            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" width="25"> Login
-        </a>
-
-        </font>
-
-        <br><br>
-    </nav>
 </header>
 
-<hr>
+    <h2>📊 Pedidos Realizados</h2>
 
-
-
-<h2>📊 Pedidos Realizados</h2>
+<br>
 
 <table>
 <tr>
 
-<!-- TABLA -->
 <td>
 
 <table border="1">
-    <tr>
-        <th>N° Pedido</th>
-        <th>Cliente</th>
-        <th>Producto</th>
-        <th>Cantidad</th>
-        <th>Total</th>
-        <th>Estado</th>
-    </tr>
 
-    <tr><td>001</td><td>Juan Pérez</td><td>Pollo</td><td>2</td><td>S/ 30</td><td>En proceso</td></tr>
-    <tr><td>002</td><td>María López</td><td>Chaufa</td><td>1</td><td>S/ 10</td><td>Preparando</td></tr>
-    <tr><td>003</td><td>Carlos Ramírez</td><td>Hamburguesa</td><td>2</td><td>S/ 24</td><td>Enviado</td></tr>
-    <tr><td>004</td><td>Lucía Torres</td><td>Lomo Saltado</td><td>1</td><td>S/ 14</td><td>En proceso</td></tr>
-    <tr><td>005</td><td>Pedro Gómez</td><td>Pizza</td><td>3</td><td>S/ 24</td><td>Preparando</td></tr>
-    <tr><td>006</td><td>Ana Fernández</td><td>Ají de Gallina</td><td>2</td><td>S/ 24</td><td>Enviado</td></tr>
+<tr>
+<th>N° Pedido</th>
+<th>Cliente</th>
+<th>Producto</th>
+<th>Cantidad</th>
+<th>Total</th>
+<th>Estado</th>
+</tr>
+
+<tr><td>001</td><td>Juan Pérez</td><td>Pollo</td><td>2</td><td>S/ 30</td><td>En proceso</td></tr>
+<tr><td>002</td><td>María López</td><td>Chaufa</td><td>1</td><td>S/ 10</td><td>Preparando</td></tr>
+<tr><td>003</td><td>Carlos Ramírez</td><td>Hamburguesa</td><td>2</td><td>S/ 24</td><td>Enviado</td></tr>
+<tr><td>004</td><td>Lucía Torres</td><td>Lomo Saltado</td><td>1</td><td>S/ 14</td><td>En proceso</td></tr>
+<tr><td>005</td><td>Pedro Gómez</td><td>Pizza</td><td>3</td><td>S/ 24</td><td>Preparando</td></tr>
+<tr><td>006</td><td>Ana Fernández</td><td>Ají de Gallina</td><td>2</td><td>S/ 24</td><td>Enviado</td></tr>
+
 </table>
 
 </td>
 
-<!-- GIF -->
-<td>
-    <h3> </h3>
-    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2I5OXR4MDkwdHAwa25oNTVqZW9mZmZwbWo0ZDk4djVnY2pjbjJseSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9QUxCtwPStWbPOtgPB/giphy.gif" width="250">
+<td style="padding-left:40px">
+
+<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2I5OXR4MDkwdHAwa25oNTVqZW9mZmZwbWo0ZDk4djVnY2pjbjJseSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9QUxCtwPStWbPOtgPB/giphy.gif" width="250">
+
 </td>
 
 </tr>
@@ -96,33 +194,41 @@
 
 <br>
 
-<p>
-    🔙 <a href="menu.html">Volver al Menú</a> |
-    🏠 <a href="index.html">Ir al Inicio</a>
-</p>
-
-<hr>
+    <center>
+        🔙 <a href="menu.html">Volver al Menú</a> |
+        🏠 <a href="index.html">Ir al Inicio</a>
+    </center>
 
 <footer>
-    
-    <hr>
 
     <p>📧 contacto@refood.com</p>
-    <p><img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776476222/whatsapp_ovkjco.png" alt="Logo ReFood" width="30"> +51 987 654 321</p>
-
-    <p><img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776564974/google-maps_gayzto.png" width="30"> Lima, Perú</p>
 
     <p>
-        📱 Síguenos en redes:
-        <a href="#">Facebook</a> |
-        <a href="#">Instagram</a> |
-        <a href="#">TikTok</a>
+        <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776476222/whatsapp_ovkjco.png" width="25">
+        +51 987 654 321
     </p>
 
-    <p>
-        <a href="terminos.html">Términos y condiciones</a> |
-        <a href="privacidad.html">Política de privacidad</a>
-    </p>
+<p>
+    <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776564974/google-maps_gayzto.png" width="25">
+    Lima, Perú
+</p>
+
+<p>
+    <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776564974/google-maps_gayzto.png" width="25">
+    Lima, Perú
+</p>
+
+<p>
+    📱 Síguenos en redes:
+    <a href="#">Facebook</a> |
+    <a href="#">Instagram</a> |
+    <a href="#">TikTok</a>
+</p>
+
+<p>
+    <a href="terminos.html">Términos y condiciones</a> |
+    <a href="privacidad.html">Política de privacidad</a>
+</p>
 
     <p>🕒 Atención: Lunes a Domingo 9:00 am - 9:00 pm</p>
 
