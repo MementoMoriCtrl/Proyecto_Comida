@@ -3,65 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <title>ReFood</title>
+
+    <style>
+
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        background:#f6f9f7;
+        margin:0;
+    }
+
+/* HEADER */
+
+    header{
+        background:white;
+        padding:20px;
+        text-align:center;
+        box-shadow:0px 2px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1{
+        color:#1f7a4c;
+        font-size:40px;
+    }
+
+    header p{
+        color:#666;
+    }
+
+    /* NAV */
+
+    nav{
+        margin-top:15px;
+    }
+
+    nav a{
+        text-decoration:none;
+        color:#333;
+        font-weight:bold;
+        padding:10px 18px;
+        border-radius:8px;
+        transition:0.3s;
+    }
+
+    nav a:hover{
+        background:#1f7a4c;
+        color:white;
+    }
+
+    /* TITULOS */
+
+    h2{
+        text-align:center;
+        color:#1f7a4c;
+        margin-top:40px;
+    }
+
+    /* CONTENEDOR PRINCIPAL */
+
+    table{
+        margin:auto;
+    }
+
+    /* FORMULARIO */
+
+    form{
+        background:white;
+        padding:30px;
+        border-radius:12px;
+        box-shadow:0px 4px 20px rgba(0,0,0,0.08);
+    }
+
+    input, select{
+        width:250px;
+        padding:10px;
+        border-radius:6px;
+        border:1px solid #ccc;
+        margin-top:5px;
+    }   
+
+    input:focus, select:focus{
+        border-color:#1f7a4c;
+        outline:none;
+    }
+
+    /* BOTON */
+
+    button{
+        background:#1f7a4c;
+        color:white;
+        border:none;
+        padding:12px 25px;
+        border-radius:8px;
+        font-size:16px;
+        cursor:pointer;
+        margin-top:15px;
+    }
+
+    button:hover{
+        background:#17623d;
+    }
+
+    /* LINKS */
+
+    a{
+        text-decoration:none;
+        color:#1f7a4c;
+        font-weight:bold;
+    }
+
+    a:hover{
+        text-decoration:underline;
+    }
+
+    /* FOOTER */
+
+    footer{
+        background:#1f7a4c;
+        color:white;
+        text-align:center;
+        padding:25px;
+        margin-top:40px;
+    }
+
+    footer a{
+        color:white;
+    }
+
+    footer img{
+        vertical-align:middle;
+    }
+
+    </style>
+
 </head>
 <body>
 
 <header>
+
     <h1>
-    <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/f_auto,q_auto/logo1_tucovp" alt="Logo ReFood" width="120">
+    <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/f_auto,q_auto/logo1_tucovp" width="120">
     ReFood
     </h1>
+
     <p><strong>Rescatando comida, alimentando personas.</strong></p>
-
-    <!-- BARRA DE NAV -->
     <nav>
-        <br>
 
-        <font size="5">
+    <a href="index.html">Inicio</a> |
+    <a href="menu.html">Menú</a> |
+    <a href="form_pedido.html">Nuevo Pedido</a> |
+    <a href="ofertas.html">Ofertas</a> |
+    <a href="pedidos.html">Pedidos Realizados</a> |
+    <a href="impacto.html">Impacto</a> |
+    <a href="login.html">Login</a>
 
-        <a href="index.html">
-            <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776561543/home-button_qnpohv.png" width="25"> Inicio
-        </a> &nbsp;&nbsp;&nbsp;|
-
-        <a href="menu.html">
-            <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776561625/menu_qairwh.png" width="25"> Menú
-        </a> &nbsp;&nbsp;&nbsp;|
-
-        <a href="form_pedido.html">
-            <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" width="25"> Nuevo Pedido
-        </a> &nbsp;&nbsp;&nbsp;|
-
-        <a href="ofertas.html">
-            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" width="25"> Ofertas
-        </a> &nbsp;&nbsp;&nbsp;|
-
-        <a href="pedidos.html">
-            <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776564487/checklist_pkwoee.png" width="25"> Pedidos Realizados
-        </a> &nbsp;&nbsp;&nbsp;|
-
-        <a href="impacto.html">
-            <img src="https://cdn-icons-png.flaticon.com/512/2909/2909765.png" width="25"> Impacto
-        </a> &nbsp;&nbsp;&nbsp;|
-
-        <a href="login.html">
-            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" width="25"> Login
-        </a>
-
-        </font>
-
-        <br><br>
     </nav>
+
 </header>
-
-<hr>
-
-
 
 <h2>📦 Realizar Pedido</h2>
 
 <table>
 <tr>
-
 <!-- FORMULARIO -->
 <td>
 
@@ -76,9 +178,7 @@
     <label>Teléfono:</label><br>
     <input type="text" required><br><br>
 
-    <h4>
-        <font size="5">🍽️ Arma tu pedido:</font>
-    </h4>
+    <h3>🍽️ Arma tu pedido:</h3>
 
 <table>
 
@@ -105,119 +205,59 @@
 </select>
 </td>
 
-<td>&nbsp;&nbsp;&nbsp;</td>
+<td>&nbsp;&nbsp;</td>
 
 <td>Cantidad:</td>
 <td><input type="number" min="1"></td>
+
 </tr>
 
-<tr><td><br></td></tr> <!-- ESPACIO -->
-
-<tr>
-<td>Plato:</td>
-<td>
-<select>
-<option disabled selected>Seleccione</option>
-<option>Pollo a la brasa</option>
-<option>Arroz Chaufa</option>
-<option>Hamburguesa</option>
-<option>Lomo Saltado</option>
-<option>Ají de Gallina</option>
-<option>Tallarines Verdes</option>
-<option>Pizza Familiar</option>
-<option>Salchipapas</option>
-<option>Ceviche</option>
-<option>Chicharrón de pollo</option>
-<option>Broaster</option>
-<option>Ensalada César</option>
-<option>Hot Dog</option>
-<option>Empanadas</option>
-<option>Arroz con Pollo</option>
-</select>
-</td>
-
-<td>&nbsp;&nbsp;&nbsp;</td>
-
-<td>Cantidad:</td>
-<td><input type="number" min="1"></td>
-</tr>
-
-<tr><td><br></td></tr> <!-- ESPACIO -->
-
-<tr>
-<td>Plato:</td>
-<td>
-<select>
-<option disabled selected>Seleccione</option>
-<option>Pollo a la brasa</option>
-<option>Arroz Chaufa</option>
-<option>Hamburguesa</option>
-<option>Lomo Saltado</option>
-<option>Ají de Gallina</option>
-<option>Tallarines Verdes</option>
-<option>Pizza Familiar</option>
-<option>Salchipapas</option>
-<option>Ceviche</option>
-<option>Chicharrón de pollo</option>
-<option>Broaster</option>
-<option>Ensalada César</option>
-<option>Hot Dog</option>
-<option>Empanadas</option>
-<option>Arroz con Pollo</option>
-</select>
-</td>
-
-<td>&nbsp;&nbsp;&nbsp;</td>
-
-<td>Cantidad:</td>
-<td><input type="number" min="1"></td>
-</tr>
-<tr><td><br></td></tr>
 </table>
+
+    <br>
+
     <button type="submit">Enviar Pedido</button>
 
 </form>
 
 </td>
-
 <!-- GIF -->
 <td>
-    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWoxZ3BtZWpmZnQ2NHlzeW8yNDFwbmZ4ZjU4cXFxMGw5cm9tYnBmNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CT903eXpAYGmdLitd5/giphy.gif" 
-         alt="Pedido comida" width="350">
+
+    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWoxZ3BtZWpmZnQ2NHlzeW8yNDFwbmZ4ZjU4cXFxMGw5cm9tYnBmNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CT903eXpAYGmdLitd5/giphy.gif" width="350">
+
 </td>
 
 </tr>
 </table>
 
 <br>
-<a href="menu.html">← Volver al menú</a>
+
+<center>
+<a href="menu.html">← Volver al menú</a> |
 <a href="index.html">← Volver al inicio</a>
-
-
-<hr>
+</center>
 
 <footer>
-    
-    <hr>
 
     <p>📧 contacto@refood.com</p>
-    <p><img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776476222/whatsapp_ovkjco.png" alt="Logo ReFood" width="30"> +51 987 654 321</p>
-
-    <p><img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776564974/google-maps_gayzto.png" width="30"> Lima, Perú</p>
 
     <p>
-        📱 Síguenos en redes:
+        <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776476222/whatsapp_ovkjco.png" width="25">
+        +51 987 654 321
+    </p>
+
+    <p>
+        <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776564974/google-maps_gayzto.png" width="25">
+        Lima, Perú
+    </p>
+
+    <p>
+        Síguenos:
         <a href="#">Facebook</a> |
         <a href="#">Instagram</a> |
         <a href="#">TikTok</a>
     </p>
-
-    <p>
-        <a href="terminos.html">Términos y condiciones</a> |
-        <a href="privacidad.html">Política de privacidad</a>
-    </p>
-
-    <p>🕒 Atención: Lunes a Domingo 9:00 am - 9:00 pm</p>
 
     <p>© 2026 ReFood - Todos los derechos reservados</p>
 
