@@ -1,58 +1,53 @@
-/* 1. Fuente de Google (Sesión 06) */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/* 1. FUENTES (Sesión 06) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: #f4f9f4; 
+    color: #333;
     margin: 0;
     padding: 20px;
-    background-color: #f4f4f4;
+    line-height: 1.6;
 }
 
-/* 2. Ajuste de imagen (Object-fit del PPT) */
-.logo-img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain; /* Para que no se deforme */
-}
-
-/* 3. Modelo de Cajas (Padding y Margin) */
-header {
-    text-align: center;
-    background: white;
-    padding: 20px;
-    margin-bottom: 20px;
+/* 2. AJUSTE DE IMÁGENES (Object-fit) */
+img {
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
+    object-fit: cover; /* Evita que las fotos de comida se deformen */
 }
 
-/* 4. Estilo de la Tabla */
-.tabla-menu {
+/* 3. MODELO DE CAJAS (Padding y Margin) */
+section {
+    background: white;
+    margin-bottom: 25px;
+    padding: 25px; /* Espacio interno para que el texto no choque */
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.05);
+}
+
+/* 4. DISEÑO DE NAVEGACIÓN */
+nav a {
+    text-decoration: none;
+    color: #2e7d32;
+    font-weight: 600;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    background-color: #e8f5e9;
+    border-radius: 5px;
+}
+
+/* 5. TABLAS (Para el menú) */
+table {
     width: 100%;
     border-collapse: collapse;
-    background: white;
 }
 
-.tabla-menu th, .tabla-menu td {
-    padding: 15px; /* Relleno para que no esté apretado */
-    border: 1px solid #ddd;
-    text-align: left;
-}
-
-.tabla-menu th {
+th {
     background-color: #4CAF50;
     color: white;
-}
-
-.precio-oferta {
-    color: red;
-    font-weight: bold;
-}
-
-/* 5. Botones redondeados */
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 12px;
 }
