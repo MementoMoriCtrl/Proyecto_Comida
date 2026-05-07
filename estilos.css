@@ -1,1 +1,58 @@
+/* 1. Fuente de Google (Sesión 06) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* 2. Ajuste de imagen (Object-fit del PPT) */
+.logo-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain; /* Para que no se deforme */
+}
+
+/* 3. Modelo de Cajas (Padding y Margin) */
+header {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* 4. Estilo de la Tabla */
+.tabla-menu {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.tabla-menu th, .tabla-menu td {
+    padding: 15px; /* Relleno para que no esté apretado */
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.tabla-menu th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.precio-oferta {
+    color: red;
+    font-weight: bold;
+}
+
+/* 5. Botones redondeados */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
