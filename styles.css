@@ -1,0 +1,685 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f6f0dc;
+    color: #2d2d2d;
+}
+
+
+
+/* HEADER */
+header {
+        
+    background: white;
+    padding: 20px 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* LOGO */
+header h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* LOGO */
+header h1 img {
+
+    width: 200px;
+
+    transform: translateX(40px) translateY(10px);
+
+    transition: 4s ease;
+}
+
+header h1 span {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* HOVER */
+header h1 img:hover {
+
+    transform:
+    translateX(40px)
+    translateY(10px)
+    rotate(360deg)
+    scale(1.1);
+}
+
+/* FRASE */
+header p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* NAVBAR */
+nav {
+    margin-top: 15px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+nav a:hover {
+    color: #ff6600;
+}
+
+/* BOTÓN INGRESAR */
+.btn-empezar{
+
+    background-color: #e0b43b;
+
+    color: #222 !important;
+
+    padding: 12px 28px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition: 0.4s;
+
+    border: 2px solid #222;
+}
+
+    /* HOVER de empezar */
+    .btn-empezar:hover{
+
+    background-color: #8bc34a;
+
+    transform: scale(1.08);
+
+    color: white;
+}
+
+/* LINKS DEL MENÚ */
+nav a{
+
+    text-decoration: none;
+    color: #222;
+
+    /* Hace el cambio suave */
+    transition: 0.3s;
+}
+
+/* EFECTO CUANDO PASAS EL MOUSE */
+nav a:hover{
+
+    color: #ff7b00;
+
+    /* Lo mueve un poco hacia arriba */
+    transform: translateY(-3px);
+}
+
+/* MAIN */
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* SECCIONES */
+section {
+    background: white;
+    margin: 20px 0;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* TITULOS */
+h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #2e7d32;
+}
+
+/* LISTAS */
+ul, ol {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+/* IMAGEN OFERTA */
+section img {
+    margin-top: 10px;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+/* BOTON */
+a {
+    color: #ff6600;
+    font-weight: bold;
+}
+
+/subrayado/
+a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #ffcc00;
+}
+
+/* BOTONES */
+.btn-main{
+
+    background-color: #e0b43b;
+
+    color: #222;
+
+    padding: 15px 35px;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    transition: 0.3s;
+}
+
+.btn-main:hover{
+
+    transform: scale(1.05);
+
+    background-color: #c89a25;
+}
+
+/* ========================= */
+/* LOGIN REFOOD */
+/* ========================= */
+
+/* FONDO */
+.login-body{
+
+    background-color: #dfe8c4;
+
+    font-family: 'Segoe UI', sans-serif;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 100vh;
+    
+}
+
+/* CONTENEDOR */
+.login-container{
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+/* TARJETA */
+.login-card{
+
+    
+
+    background: white;
+
+    width: 420px;
+
+    border-radius: 16px;
+
+    padding: 35px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+
+    animation: aparecer 0.8s ease;
+
+
+}
+/* IMAGEN SUPERIOR LOGIN */
+.login-top-image{
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: -120px;
+
+    margin-bottom: 20px;
+}
+
+/* IMAGEN */
+.login-top-image img{
+
+    width: 250px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+    transition: 0.4s;
+}
+
+/* EFECTO HOVER */
+.login-top-image img:hover{
+
+    transform: scale(1.05);
+}
+
+/* LOGO */
+.login-logo{
+
+    text-align: center;
+}
+
+.login-logo img{
+
+    width: 180px;
+
+    margin-bottom: 10px;
+}
+
+.login-logo h1{
+
+    font-size: 42px;
+
+    color: #1f3d2c;
+
+    margin-bottom: 10px;
+}
+
+.login-logo p{
+
+    color: #555;
+
+    margin-bottom: 15px;
+}
+
+/* TITULO */
+.login-card h2{
+
+    text-align: center;
+
+    margin-top:18px;
+
+    color: #222;
+}
+
+.subtexto{
+
+    text-align: center;
+
+    color: #666;
+
+    margin-bottom: 25px;
+}
+
+/* INPUTS */
+.input-group{
+
+    margin-bottom: 20px;
+}
+
+.input-group label{
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+    color: #333;
+}
+
+.input-group input{
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+/* EFECTO INPUT */
+.input-group input:focus{
+
+    border-color: #2e7d32;
+
+    outline: none;
+
+    transform: scale(1.02);
+}
+
+/* RECORDAR */
+.recordar{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+}
+
+/* BOTON */
+.btn-login{
+
+    width: 100%;
+
+    background-color: #2e7d32;
+
+    color: white;
+
+    border: none;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* HOVER BOTON */
+.btn-login:hover{
+
+    background-color: #a09e43;
+
+    transform: translateY(-3px);
+}
+
+/* LINKS */
+.extra-links{
+
+    margin-top: 25px;
+
+    text-align: center;
+}
+
+.extra-links a{
+
+    color: #2e7d32;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.extra-links a:hover{
+
+    text-decoration: underline;
+}
+
+/* ANIMACION */
+@keyframes aparecer{
+
+    from{
+
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to{
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+/* ========================= */
+/* REGISTRO REFOOD */
+/* ========================= */
+
+/* BODY */
+.registro-body{
+
+    background-color: #dfe8c4;
+
+    font-family: 'Segoe UI', sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    padding-top: 40px;
+}
+
+/* CONTENEDOR */
+.registro-container{
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+/* TARJETA */
+.registro-card{
+
+    width: 450px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+
+    animation: aparecer 0.8s ease;
+}
+
+/* LOGO */
+.registro-logo{
+
+    text-align: center;
+}
+
+.registro-logo img{
+
+    width: 160px;
+
+    margin-bottom: 10px;
+
+    transition: 0.4s;
+}
+
+/* EFECTO LOGO */
+.registro-logo img:hover{
+
+    transform: scale(1.08) rotate(15deg);
+}
+
+/* TITULO LOGO */
+.registro-logo h1{
+
+    font-size: 42px;
+
+    color: #1f3d2c;
+
+    margin-bottom: 10px;
+}
+
+/* TEXTO */
+.registro-logo p{
+
+    color: #666;
+
+    margin-bottom: 15px;
+}
+
+/* TITULO */
+.registro-card h2{
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    margin-bottom: 10px;
+
+    color: #222;
+}
+
+.registro-texto{
+
+    text-align: center;
+
+    color: #666;
+
+    margin-bottom: 25px;
+}
+
+/* INPUTS */
+.input-group{
+
+    margin-bottom: 18px;
+}
+
+.input-group label{
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+    color: #333;
+}
+
+.input-group input{
+
+    width: 100%;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    border: 2px solid #ddd;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+/* HOVER INPUT */
+.input-group input:focus{
+
+    border-color: #2e7d32;
+
+    outline: none;
+
+    transform: scale(1.02);
+}
+
+/* BOTON */
+.btn-registro{
+
+    width: 100%;
+
+    background-color: #2e7d32;
+
+    color: white;
+
+    border: none;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* HOVER BOTON */
+.btn-registro:hover{
+
+    background-color: #a09e43;
+
+    transform: translateY(-3px);
+}
+
+/* LINKS */
+.registro-links{
+
+    margin-top: 25px;
+
+    text-align: center;
+}
+
+.registro-links a{
+
+    color: #2e7d32;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.registro-links a:hover{
+
+    text-decoration: underline;
+}
