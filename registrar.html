@@ -3,75 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <title>ReFood</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="registro-body">
 
-<header>
-    <h1>
-    <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/f_auto,q_auto/logo1_tucovp" alt="Logo ReFood" width="120">
-    ReFood
-    </h1>
-    <p><strong>Rescatando comida, alimentando personas.</strong></p>
+    <!-- CONTENEDOR -->
+    <main class="registro-container">
 
-    <nav>
-        <a href="login.html">👤 Login</a>
-    </nav>
-</header>
+        <!-- TARJETA -->
+        <section class="registro-card">
 
-<hr>
+            <!-- LOGO -->
+            <div class="registro-logo">
 
+                <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1778804678/ChatGPT_Image_14_may_2026_07_24_24_p.m._trot9d.png"
+                alt="Logo ReFood">
 
+                <p>¡Únete al cambio y ayuda a reducir el desperdicio alimentario!</p>
 
-<h2>📝 Registro de Usuario</h2>
+            </div>
 
-<form>
-    <label>Nombre completo:</label><br>
-    <input type="text"><br><br>
+            <!-- TITULO -->
+            <h2>Crear cuenta</h2>
 
-    <label>Correo electrónico:</label><br>
-    <input type="email"><br><br>
+            <p class="registro-texto">
+                Completa tus datos para registrarte en ReFood.
+            </p>
 
-    <label>Contraseña:</label><br>
-    <input type="password"><br><br>
+            <!-- FORMULARIO -->
+            <form action="login.html">
 
-    <label>Confirmar contraseña:</label><br>
-    <input type="password"><br><br>
+                <!-- NOMBRE -->
+                <div class="input-group">
 
-    <button>Registrar</button>
-</form>
+                    <label>Nombre completo</label>
 
-<br>
-<a href="login.html">Volver a iniciar sesión</a>
+                    <input type="text"
+                    placeholder="Ingrese su nombre"
+                    required>
 
+                </div>
 
-<hr>
+                <!-- CORREO -->
+                <div class="input-group">
 
-<footer>
-    
-    <hr>
+                    <label>Correo electrónico</label>
 
-    <p>📧 contacto@refood.com</p>
-    <p><img src="https://res-console.cloudinary.com/dk25vjxwa/thumbnails/transform/v1/image/upload/Y19maWxsLGhfMjAwLHdfMjAw/v1/d2hhdHNhcHBfb3ZramNv/template_primary" alt="Logo ReFood" width="30"> +51 987 654 321</p>
+                    <input type="email"
+                    placeholder="Ingrese su correo"
+                    required>
 
-    <p><img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776564974/google-maps_gayzto.png" width="30"> Lima, Perú</p>
+                </div>
 
-    <p>
-        📱 Síguenos en redes:
-        <a href="#">Facebook</a> |
-        <a href="#">Instagram</a> |
-        <a href="#">TikTok</a>
-    </p>
+                <!-- PASSWORD -->
+                <div class="input-group">
 
-    <p>
-        <a href="#">Términos y condiciones</a> |
-        <a href="#">Política de privacidad</a>
-    </p>
+                    <label>Contraseña</label>
 
-    <p>🕒 Atención: Lunes a Domingo 9:00 am - 9:00 pm</p>
+                    <input type="password"
+                    placeholder="Ingrese su contraseña"
+                    required>
 
-    <p>© 2026 ReFood - Todos los derechos reservados</p>
+                </div>
 
-</footer>
+                <!-- CONFIRMAR -->
+                <div class="input-group">
+
+                    <label>Confirmar contraseña</label>
+
+                    <input type="password"
+                    placeholder="Confirme su contraseña"
+                    required>
+
+                </div>
+
+                <!-- BOTON -->
+                <button type="submit" class="btn-registro">
+
+                    Registrarse
+
+                </button>
+
+            </form>
+
+            <!-- LINK -->
+            <div class="registro-links">
+
+                <p>
+                    ¿Ya tienes cuenta?
+                    <a href="login.html">
+                        Inicia sesión
+                    </a>
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
 
 </body>
 </html>

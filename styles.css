@@ -1,0 +1,786 @@
+/* ========================= */
+/* RESET GENERAL */
+/* ========================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========================= */
+/* BODY */
+/* ========================= */
+
+body{
+    font-family: 'Poppins', sans-serif;
+
+    background: rgb(245, 230, 143);
+
+    color: #2d2d2d;
+
+    line-height: 1.6;
+}
+
+/* ========================= */
+/* HEADER */
+/* ========================= */
+
+header{
+
+    background: white;
+
+    padding: 5px 20px;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    text-align: center;
+}
+
+/* LOGO */
+
+/* CONTENEDOR LOGO */
+
+.logo-container{
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 100%;
+}
+
+/* IMAGEN LOGO */
+
+.logo-container img{
+
+    width: 450px;
+
+    position: relative;
+
+    animation: moverLogo 3s ease-in-out infinite;
+
+    transition: transform 0.4s ease;
+}
+
+/* HOVER LOGO */
+
+.logo-container img:hover{
+
+    animation-play-state: paused;
+
+    transform: translateX(0px) scale(1.08);
+
+    cursor: pointer;
+}
+    
+
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+nav{
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+nav a{
+
+    text-decoration: none;
+
+    color: #333;
+
+    background: #ffffff;
+
+    padding: 10px 18px;
+
+    border-radius: 12px;
+
+    font-weight: 500;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    transition: 0.3s;
+}
+
+/* HOVER NAV */
+
+nav a:hover{
+
+    background: #1f7a4c;
+
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+/* ========================= */
+/* BOTON PRINCIPAL */
+/* ========================= */
+
+.btn-empezar,
+.btn-main,
+.btn-login,
+.btn-registro,
+button{
+
+    background: #1f7a4c;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 22px;
+
+    border-radius: 12px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+
+    display: inline-block;
+
+}
+/* BOTON LOGIN CENTRADO */
+
+.btn-login{
+
+    display: block;
+
+    margin: auto;
+
+    width: 220px;
+
+    padding: 16px 0;
+
+    font-size: 20px;
+
+    border-radius: 14px;
+}
+/* BOTON REGISTRARSE */
+
+.btn-registro{
+
+    display: block;
+
+    margin: 25px auto;
+
+    width: 220px;
+
+    padding: 16px;
+
+    font-size: 18px;
+
+    text-align: center;
+
+    border-radius: 14px;
+}
+/* HOVER BOTONES */
+
+.btn-empezar:hover,
+.btn-main:hover,
+.btn-login:hover,
+.btn-registro:hover,
+button:hover{
+
+    background: #145c38;
+
+    transform: scale(1.15);
+}
+
+/* ========================= */
+/* MAIN */
+/* ========================= */
+
+main{
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 30px 20px;
+}
+
+/* ========================= */
+/* SECCIONES */
+/* ========================= */
+
+section{
+
+    background: white;
+
+    margin-bottom: 25px;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+/* HOVER SECCIONES */
+
+section:hover{
+
+    transform: translateY(-3px);
+}
+
+/* ========================= */
+/* TITULOS */
+/* ========================= */
+
+h1,
+h2,
+h3,
+h4{
+
+    color: #1f7a4c;
+
+    margin-bottom: 15px;
+}
+
+h2{
+
+    font-size: 32px;
+}
+
+h3{
+
+    font-size: 24px;
+}
+
+/* ========================= */
+/* TEXTO */
+/* ========================= */
+
+p{
+
+    margin-bottom: 15px;
+}
+
+/* ========================= */
+/* LISTAS */
+/* ========================= */
+
+ul,
+ol{
+
+    margin-left: 25px;
+
+    margin-top: 10px;
+}
+
+/* ========================= */
+/* IMAGENES */
+/* ========================= */
+
+img{
+
+    max-width: 100%;
+
+    border-radius: 12px;
+}
+
+/* ========================= */
+/* TABLAS */
+/* ========================= */
+
+table{
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 20px;
+}
+
+th{
+
+    background: #1f7a4c;
+
+    color: white;
+}
+
+th,
+td{
+
+    border: 1px solid #ddd;
+
+    padding: 14px;
+
+    text-align: center;
+}
+
+tr:nth-child(even){
+
+    background: #f9f9f9;
+}
+
+/* HOVER TABLA */
+
+tr:hover{
+
+    background: #edf7f1;
+}
+
+/* ========================= */
+/* FORMULARIOS */
+/* ========================= */
+
+input,
+select{
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-top: 8px;
+
+    margin-bottom: 18px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+/* FOCUS */
+
+input:focus,
+select:focus{
+
+    outline: none;
+
+    border-color: #1f7a4c;
+
+    box-shadow: 0 0 10px rgba(31,122,76,0.2);
+}
+
+/* ========================= */
+/* LOGIN Y REGISTRO */
+/* ========================= */
+
+.login-body,
+.registro-body{
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 100vh;
+
+    background: rgb(245, 230, 143);
+}
+/* CONTENEDOR LOGIN */
+
+.login-container{
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 100vh;
+}
+
+/* TARJETAS */
+
+.login-card,
+.registro-card{
+
+    width: 580px;
+
+    background: #fffdf4;
+
+    padding: 40px;
+
+    border-radius: 24px;
+
+    box-shadow: 0 0 15px rgba(31,122,76,0.25);
+
+    animation: aparecer 0.8s ease;
+
+    
+}
+/* TITULO LOGIN */
+
+.login-card h2{
+
+    text-align: center;
+
+    font-size: 40px;
+
+    margin-bottom: 20px;
+
+    line-height: 1.2;
+}
+
+/* TITULO REGISTRO */
+
+.registro-card h2{
+
+    text-align: center;
+
+    margin-top: -30px;
+
+    margin-bottom: 15px;
+}
+
+/* TEXTO REGISTRO */
+
+.registro-card p{
+
+    text-align: center;
+}
+
+/* LOGOS */
+
+/* LOGO LOGIN */
+
+.login-logo,
+.registro-logo{
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+    background: #fffdf4;
+
+    padding: 20px;
+
+    border-radius: 18px;
+}
+
+.login-logo img,
+.registro-logo img{
+
+    width: 500px;
+
+    margin-bottom: 10px;
+
+    transition: 0.4s;
+}
+
+/* HOVER LOGOS */
+
+.login-logo img:hover,
+.registro-logo img:hover{
+
+    transform: scale(1.05) rotate(3deg);
+}
+
+/* INPUT GROUP */
+
+.input-group{
+
+    margin-bottom: 20px;
+}
+
+.input-group label{
+
+    font-weight: bold;
+
+    display: block;
+
+    margin-bottom: 8px;
+}
+
+/* LINKS */
+
+.extra-links,
+.registro-links{
+
+    margin-top: 20px;
+
+    text-align: center;
+}
+
+.extra-links a,
+.registro-links a{
+
+    color: #1f7a4c;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.extra-links a:hover,
+.registro-links a:hover{
+
+    text-decoration: underline;
+}
+.subtexto{
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+    font-size: 20px;
+
+    color: #555;
+}
+/* RECORDAR SESION */
+
+/* RECORDAR SESION */
+
+.recordar{
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 10px;
+
+    margin-bottom: 25px;
+
+    font-size: 16px;
+}
+
+/* CHECKBOX */
+
+.recordar input{
+
+    width: auto;
+
+    margin: 0;
+}
+
+/* CHECKBOX */
+
+.recordar input{
+
+    width: auto;
+
+    margin: 0;
+}
+/* ========================= */
+/* GRID OFERTAS */
+/* ========================= */
+
+.ofertas-grid{
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 20px;
+}
+
+/* CARD OFERTA */
+
+.oferta-card{
+
+    background: #fffdf3;
+
+    border: 2px solid #f0e2a0;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+/* HOVER CARD */
+
+.oferta-card:hover{
+
+    transform: translateY(-5px);
+
+    background: #1f7a4c;
+
+    color: white;
+}
+
+/* ========================= */
+/* FLEXBOX PEDIDO */
+/* ========================= */
+
+.pedido-container{
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    flex-wrap: wrap;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer{
+
+    background: #1f1f1f;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 40px;
+}
+
+footer a{
+
+    color: #f5e68f;
+}
+
+/* ========================= */
+/* ANIMACIONES */
+/* ========================= */
+
+@keyframes aparecer{
+
+    from{
+
+        opacity: 0;
+
+        transform: translateY(30px);
+    }
+
+    to{
+
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+/* ========================= */
+/* RESPONSIVE DESIGN */
+/* ========================= */
+
+@media(max-width:768px){
+
+    nav{
+
+        flex-direction: column;
+    }
+
+    header{
+
+        text-align: center;
+    }
+
+    header h1{
+
+        justify-content: center;
+    }
+
+    .login-card,
+    .registro-card{
+
+        width: 95%;
+    }
+
+    .pedido-container{
+
+        flex-direction: column;
+    }
+
+    h2{
+
+        font-size: 26px;
+    }
+
+    table{
+
+        font-size: 14px;
+    }
+}
+
+/* BOTON COMENZAR */
+
+.btn-empezar{
+
+    background: #f4b400;
+
+    color: white !important;
+
+    font-weight: 700;
+}
+
+/* HOVER */
+
+.btn-empezar:hover{
+
+    background: #d89c00;
+
+    color: white !important;
+}
+
+/*LOGOS*/
+/* ANIMACION LOGO */
+
+@keyframes moverLogo{
+
+    0%{
+
+        transform: translateX(-50px);
+    }
+
+    50%{
+
+        transform: translateX(50px);
+    }
+
+    100%{
+
+        transform: translateX(-50px);
+    }
+}
+
+/* HOVER LOGO */
+
+header h1 img:hover{
+
+    animation-play-state: paused;
+
+    transform: translateX(0) scale(1.08);
+}
