@@ -445,6 +445,8 @@ select:focus{
 
     margin-bottom: 20px;
 
+    margin-top: -30px;
+
     line-height: 1.2;
 }
 
@@ -477,9 +479,11 @@ select:focus{
 
     margin-bottom: 20px;
 
+    margin-top: -20px;
+
     background: #fffdf4;
 
-    padding: 20px;
+    padding: 8px;
 
     border-radius: 18px;
 }
