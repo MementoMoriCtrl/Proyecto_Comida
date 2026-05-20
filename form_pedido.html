@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>ReFood</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <header>
     <h1>
-    <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/f_auto,q_auto/logo1_tucovp" alt="Logo ReFood" width="120">
-    ReFood
+    <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1778804678/ChatGPT_Image_14_may_2026_07_24_24_p.m._trot9d.png" alt="Logo ReFood" width="420">
+
     </h1>
-    <p><strong>Rescatando comida, alimentando personas.</strong></p>
+    
 
     <!-- BARRA DE NAV -->
     <nav>
         <br>
-
-        <font size="5">
 
         <a href="index.html">
             <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776561543/home-button_qnpohv.png" width="25"> Inicio
@@ -39,10 +38,6 @@
             <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776564487/checklist_pkwoee.png" width="25"> Pedidos Realizados
         </a> &nbsp;&nbsp;&nbsp;|
 
-        <a href="impacto.html">
-            <img src="https://cdn-icons-png.flaticon.com/512/2909/2909765.png" width="25"> Impacto
-        </a> &nbsp;&nbsp;&nbsp;|
-
         <a href="login.html">
             <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" width="25"> Login
         </a>
@@ -57,137 +52,173 @@
 
 
 
-<h2>📦 Realizar Pedido</h2>
+<h2 class="titulo-menu">
+    📦 Realizar Pedido
+</h2>
 
-<table>
-<tr>
+<div class="pedido-layout">
 
-<!-- FORMULARIO -->
-<td>
+    <!-- TARJETA FORMULARIO -->
 
-<form action="pago.html" method="get">
+    <div class="pedido-card">
 
-    <label>Nombre del cliente:</label><br>
-    <input type="text" required><br><br>
+        <form action="pago.html" method="get">
 
-    <label>Dirección:</label><br>
-    <input type="text" required><br><br>
+            <label>Nombre del cliente:</label>
 
-    <label>Teléfono:</label><br>
-    <input type="text" required><br><br>
+            <input type="text" placeholder="Ingrese su nombre" required>
 
-    <h4>
-        <font size="5">🍽️ Arma tu pedido:</font>
-    </h4>
+            <label>Dirección:</label>
 
-<table>
+            <input type="text" placeholder="Ingrese su dirección" required>
 
-<tr>
-<td>Plato:</td>
-<td>
-<select>
-<option disabled selected>Seleccione</option>
-<option>Pollo a la brasa</option>
-<option>Arroz Chaufa</option>
-<option>Hamburguesa</option>
-<option>Lomo Saltado</option>
-<option>Ají de Gallina</option>
-<option>Tallarines Verdes</option>
-<option>Pizza Familiar</option>
-<option>Salchipapas</option>
-<option>Ceviche</option>
-<option>Chicharrón de pollo</option>
-<option>Broaster</option>
-<option>Ensalada César</option>
-<option>Hot Dog</option>
-<option>Empanadas</option>
-<option>Arroz con Pollo</option>
-</select>
-</td>
+            <label>Teléfono:</label>
 
-<td>&nbsp;&nbsp;&nbsp;</td>
+            <input type="text" placeholder="Ingrese su teléfono" required>
 
-<td>Cantidad:</td>
-<td><input type="number" min="1"></td>
-</tr>
+        <h4 class="titulo-armar">
 
-<tr><td><br></td></tr> <!-- ESPACIO -->
+                <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1779243355/arma_pedido_pbl6qs.png"
+                    alt="icono comida"
+                    class="icono-armar">
 
-<tr>
-<td>Plato:</td>
-<td>
-<select>
-<option disabled selected>Seleccione</option>
-<option>Pollo a la brasa</option>
-<option>Arroz Chaufa</option>
-<option>Hamburguesa</option>
-<option>Lomo Saltado</option>
-<option>Ají de Gallina</option>
-<option>Tallarines Verdes</option>
-<option>Pizza Familiar</option>
-<option>Salchipapas</option>
-<option>Ceviche</option>
-<option>Chicharrón de pollo</option>
-<option>Broaster</option>
-<option>Ensalada César</option>
-<option>Hot Dog</option>
-<option>Empanadas</option>
-<option>Arroz con Pollo</option>
-</select>
-</td>
+                Arma tu pedido
 
-<td>&nbsp;&nbsp;&nbsp;</td>
+        </h4>
 
-<td>Cantidad:</td>
-<td><input type="number" min="1"></td>
-</tr>
+            <!-- PRIMER PLATO -->
 
-<tr><td><br></td></tr> <!-- ESPACIO -->
+            <label>Plato:</label>
 
-<tr>
-<td>Plato:</td>
-<td>
-<select>
-<option disabled selected>Seleccione</option>
-<option>Pollo a la brasa</option>
-<option>Arroz Chaufa</option>
-<option>Hamburguesa</option>
-<option>Lomo Saltado</option>
-<option>Ají de Gallina</option>
-<option>Tallarines Verdes</option>
-<option>Pizza Familiar</option>
-<option>Salchipapas</option>
-<option>Ceviche</option>
-<option>Chicharrón de pollo</option>
-<option>Broaster</option>
-<option>Ensalada César</option>
-<option>Hot Dog</option>
-<option>Empanadas</option>
-<option>Arroz con Pollo</option>
-</select>
-</td>
+            <select>
 
-<td>&nbsp;&nbsp;&nbsp;</td>
+                <option disabled selected>
+                    Seleccione un plato
+                </option>
 
-<td>Cantidad:</td>
-<td><input type="number" min="1"></td>
-</tr>
-<tr><td><br></td></tr>
-</table>
-    <button type="submit">Enviar Pedido</button>
+                <option>Pollo a la brasa</option>
 
-</form>
+                <option>Arroz Chaufa</option>
 
-</td>
+                <option>Hamburguesa</option>
 
-<!-- GIF -->
-<td>
-    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWoxZ3BtZWpmZnQ2NHlzeW8yNDFwbmZ4ZjU4cXFxMGw5cm9tYnBmNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CT903eXpAYGmdLitd5/giphy.gif" 
-         alt="Pedido comida" width="350">
-</td>
+                <option>Lomo Saltado</option>
 
-</tr>
-</table>
+                <option>Ají de Gallina</option>
+
+                <option>Tallarines Verdes</option>
+
+                <option>Pizza Familiar</option>
+
+                <option>Salchipapas</option>
+
+                <option>Ceviche</option>
+
+                <option>Chicharrón de pollo</option>
+
+                <option>Broaster</option>
+
+                <option>Ensalada César</option>
+
+                <option>Hot Dog</option>
+
+                <option>Empanadas</option>
+
+                <option>Arroz con Pollo</option>
+
+            </select>
+
+            <label>Cantidad:</label>
+
+            <input type="number" min="1" placeholder="Cantidad">
+
+            <!-- SEGUNDO PLATO -->
+
+            <label>Segundo plato:</label>
+
+            <select>
+
+                <option disabled selected>
+                    Seleccione un plato
+                </option>
+
+                <option>Pollo a la brasa</option>
+
+                <option>Arroz Chaufa</option>
+
+                <option>Hamburguesa</option>
+
+                <option>Lomo Saltado</option>
+
+                <option>Ají de Gallina</option>
+
+                <option>Tallarines Verdes</option>
+
+                <option>Pizza Familiar</option>
+
+                <option>Salchipapas</option>
+
+                <option>Ceviche</option>
+
+                <option>Chicharrón de pollo</option>
+
+                <option>Broaster</option>
+
+                <option>Ensalada César</option>
+
+                <option>Hot Dog</option>
+
+                <option>Empanadas</option>
+
+                <option>Arroz con Pollo</option>
+
+            </select>
+
+            <label>Cantidad:</label>
+
+            <input type="number" min="1" placeholder="Cantidad">
+
+            <button type="submit" class="btn-pedido">
+
+                Enviar Pedido
+
+            </button>
+
+        </form>
+
+    </div>
+
+    <!-- IMAGEN -->
+
+    <div class="pedido-imagen">
+
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=900"
+        alt="Comida ReFood"
+        class="pedido-img">
+
+        <div class="platos-destacados">
+
+    <div class="mini-plato">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=500">
+        
+    </div>
+
+    <div class="mini-plato">
+        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=500">
+        
+        
+    </div>
+
+    <div class="mini-plato">
+        <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?q=80&w=500">
+
+    </div>
+
+</div>
+
+    </div>
+
+</div>
 
 <br>
 <a href="menu.html">← Volver al menú</a>
@@ -198,7 +229,6 @@
 
 <footer>
     
-    <hr>
 
     <p>📧 contacto@refood.com</p>
     <p><img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776476222/whatsapp_ovkjco.png" alt="Logo ReFood" width="30"> +51 987 654 321</p>
