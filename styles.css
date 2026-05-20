@@ -109,23 +109,24 @@ nav a{
 
     color: #333;
 
-    background: #ffffff;
+    background: white;
 
-    padding: 10px 18px;
+    padding: 14px 22px;
 
-    border-radius: 12px;
+    border-radius: 14px;
 
-    font-weight: 500;
+    font-weight: 600;
 
     display: flex;
 
     align-items: center;
 
-    gap: 6px;
+    gap: 8px;
 
-    transition: 0.3s;
+    transition: all 0.3s ease;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
-
 /* HOVER NAV */
 
 nav a:hover{
@@ -134,7 +135,9 @@ nav a:hover{
 
     color: white;
 
-    transform: translateY(-3px);
+    transform: translateY(-5px) scale(1.05);
+
+    box-shadow: 0 8px 18px rgba(31,122,76,0.35);
 }
 
 /* ========================= */
@@ -234,17 +237,17 @@ main{
 
 section{
 
-    background: white;
+    background: #fffdf4;
 
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 
-    padding: 30px;
+    padding: 35px;
 
-    border-radius: 20px;
+    border-radius: 24px;
 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 
-    transition: 0.3s;
+    transition: all 0.3s ease;
 }
 
 /* HOVER SECCIONES */
@@ -271,6 +274,7 @@ h4{
 h2{
 
     font-size: 32px;
+    text-align: center;
 }
 
 h3{
@@ -278,6 +282,20 @@ h3{
     font-size: 24px;
 }
 
+.titulo-menu{
+
+    text-align: center;
+
+    font-size: 35px;
+
+    margin: 30px 0;
+
+    font-weight: 700;
+
+    color: #1f7a4c;
+
+    letter-spacing: 1px;
+}
 /* ========================= */
 /* TEXTO */
 /* ========================= */
@@ -321,6 +339,14 @@ table{
     border-collapse: collapse;
 
     margin-top: 20px;
+
+    background: white;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 th{
@@ -349,7 +375,9 @@ tr:nth-child(even){
 
 tr:hover{
 
-    background: #edf7f1;
+    background: #fff3b0;
+
+    transition: 0.3s;
 }
 
 /* ========================= */
@@ -361,7 +389,7 @@ select{
 
     width: 100%;
 
-    padding: 12px;
+    padding: 15px;
 
     margin-top: 8px;
 
@@ -372,6 +400,10 @@ select{
     border-radius: 10px;
 
     transition: 0.3s;
+
+    font-size: 16px;
+
+    background: white;
 }
 
 /* FOCUS */
@@ -659,20 +691,35 @@ select:focus{
 
 footer{
 
-    background: #1f1f1f;
+    background: #1c1c1c;
 
     color: white;
 
     text-align: center;
 
-    padding: 25px;
+    padding: 50px 20px;
 
-    margin-top: 40px;
+    margin-top: 60px;
+
+    line-height: 2.2;
+
+    border-top: 4px solid #f4b400;
 }
 
 footer a{
 
     color: #f5e68f;
+}
+footer a{
+
+    transition: 0.3s;
+}
+
+footer a:hover{
+
+    color: white;
+
+    text-decoration: none;
 }
 
 /* ========================= */
@@ -787,4 +834,244 @@ header h1 img:hover{
     animation-play-state: paused;
 
     transform: translateX(0) scale(1.08);
+}
+
+/*MENÚ*/
+.img-comida{
+
+    width: 90px;
+
+    height: 70px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+.img-comida:hover{
+
+    transform: scale(1.08);
+}
+
+
+/* ========================= */
+/* PAGINA PEDIDOS */
+/* ========================= */
+
+.titulo-pedido{
+
+    text-align: center;
+
+    font-size: 38px;
+
+    margin-top: 30px;
+
+    margin-bottom: 30px;
+
+    color: #1f7a4c;
+}
+
+/* LAYOUT */
+
+.pedido-layout{
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    gap: 40px;
+
+    flex-wrap: wrap;
+
+    margin: 40px auto;
+}
+
+/* TARJETA */
+
+.pedido-card{
+
+    width: 650px;
+
+    background: #fffdf4;
+
+    padding: 40px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 0 20px rgba(31,122,76,0.15);
+}
+
+/* SUBTITULO */
+
+.pedido-card h4{
+
+    text-align: center;
+
+    color: #1f7a4c;
+
+    margin-top: 25px;
+
+    margin-bottom: 25px;
+
+    font-size: 28px;
+}
+
+/* LABELS */
+
+.pedido-card label{
+
+    font-weight: bold;
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    margin-top: 40px;
+
+    font-size: 21px;
+}
+
+/* INPUTS */
+
+.pedido-card input,
+.pedido-card select{
+
+    width: 100%;
+
+    padding: 14px;
+
+    border-radius: 12px;
+    
+
+    border: 2px solid #ddd;
+
+    font-size: 16px;
+}
+
+/* BOTON */
+
+.btn-pedido{
+
+    display: block;
+
+    margin: 35px auto 0;
+
+    width: 260px;
+
+    padding: 18px;
+
+    font-size: 20px;
+
+    border-radius: 16px;
+}
+
+/* IMAGEN */
+
+.pedido-img{
+
+    width: 420px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+    transition: 0.4s;
+}
+
+input:focus,
+select:focus{
+
+    outline: none;
+
+    border: 2px solid #1f7a4c;
+
+    box-shadow: 0 0 15px rgba(31,122,76,0.45);
+
+    transform: scale(1.01);
+
+    transition: 0.3s;
+}
+
+
+.pedido-img:hover{
+
+    transform: scale(1.03);
+}
+
+/* PLATOS DESTACADOS */
+
+.platos-destacados{
+
+    margin-top: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+/* MINI CARD */
+
+.mini-plato{
+
+    background: #fffdf4;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+
+    transition: 0.3s;
+
+    text-align: center;
+}
+
+/* HOVER */
+
+.mini-plato:hover{
+
+    transform: translateY(-5px);
+}
+
+/* IMAGEN */
+
+.mini-plato img{
+
+    width: 100%;
+
+    height: 290px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+/* TITULO ARMA TU PEDIDO */
+
+.titulo-armar{
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+/* ICONO */
+
+.icono-armar{
+
+    width: 38px;
+
+    height: 38px;
+
+    object-fit: contain;
 }
