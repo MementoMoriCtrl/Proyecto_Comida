@@ -264,11 +264,19 @@ h4{
 
     margin-bottom: 15px;
 }
-
 h2{
 
-    font-size: 32px;
     text-align: center;
+
+    font-size: 35px;
+
+    margin: 30px 0;
+
+    font-weight: 700;
+
+    color: #1f7a4c;
+
+    letter-spacing: 1px;
 }
 
 h3{
@@ -1068,4 +1076,167 @@ select:focus{
     height: 38px;
 
     object-fit: contain;
+}
+
+/* ========================= */
+/* PAGINA OFERTAS */
+/* ========================= */
+
+.ofertas-container{
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    margin: 50px auto;
+}
+
+/* GRID */
+
+.ofertas-grid{
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+    gap: 30px;
+
+    width: 90%;
+}
+
+/* CARD */
+
+.card-oferta{
+
+    background: #fffdf4;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+
+    transition: 0.4s;
+}
+
+/* HOVER */
+
+.card-oferta:hover{
+
+    transform: translateY(-10px) scale(1.03);
+
+    box-shadow: 0 18px 35px rgba(31,122,76,0.25);
+}
+
+/* IMAGEN */
+
+.card-oferta img{
+
+    width: 100%;
+
+    height: 240px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+/* INFO */
+
+.info-oferta{
+
+    padding: 25px;
+
+    text-align: center;
+}
+
+/* TITULO */
+
+.info-oferta h3{
+
+    font-size: 30px;
+
+    color: #1f7a4c;
+
+    margin-bottom: 12px;
+}
+
+/* PRECIO */
+
+.precio-oferta{
+
+    font-size: 38px;
+
+    font-weight: bold;
+
+    color: #f4b400;
+
+    margin-bottom: 10px;
+}
+
+/* TEXTO */
+
+.info-oferta span{
+
+    display: block;
+
+    font-size: 18px;
+
+    color: #555;
+
+    margin-bottom: 22px;
+}
+
+/* BOTON */
+
+.btn-oferta{
+
+    background: #1f7a4c;
+
+    color: white;
+
+    padding: 14px 28px;
+
+    border-radius: 14px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn-oferta:hover{
+
+    background: #145c38;
+
+    transform: scale(1.05);
+}
+
+/* ESTADOS DE PEDIDO */
+
+.proceso{
+    background-color: #ffe082;
+    color: #5d4037;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.preparando{
+    background-color: #81d4fa;
+    color: #01579b;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.enviado{
+    background-color: #a5d6a7;
+    color: #1b5e20;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
 }
