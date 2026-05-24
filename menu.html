@@ -20,23 +20,23 @@
 
         <a href="index.html">
             <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776561543/home-button_qnpohv.png" width="25"> Inicio
-        </a> &nbsp;&nbsp;&nbsp;|
+        </a> &nbsp;&nbsp;&nbsp;
 
         <a href="menu.html">
             <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776561625/menu_qairwh.png" width="25"> Menú
-        </a> &nbsp;&nbsp;&nbsp;|
+        </a> &nbsp;&nbsp;&nbsp;
 
         <a href="form_pedido.html">
             <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" width="25"> Nuevo Pedido
-        </a> &nbsp;&nbsp;&nbsp;|
+        </a> &nbsp;&nbsp;&nbsp;
 
         <a href="ofertas.html">
             <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" width="25"> Ofertas
-        </a> &nbsp;&nbsp;&nbsp;|
+        </a> &nbsp;&nbsp;&nbsp;
 
         <a href="pedidos.html">
             <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776564487/checklist_pkwoee.png" width="25"> Pedidos Realizados
-        </a> &nbsp;&nbsp;&nbsp;|
+        </a> &nbsp;&nbsp;&nbsp;
 
         <a href="login.html">
             <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" width="25"> Login
@@ -49,6 +49,55 @@
 </header>
 
 <hr>
+
+<section class="categorias-rappi">
+
+    <div class="filtros-top">
+
+        <span class="texto-filtrar">Filtrar por:</span>
+
+        <button class="btn-top">🍗 Platos top</button>
+        <button class="btn-top">💸 Económicos</button>
+        <button class="btn-top">⚡ Entrega rápida</button>
+        <button class="btn-top">♻️ Recomendados</button>
+
+    </div>
+
+    <div class="categorias-scroll">
+
+        <div class="categoria-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png">
+            <p>Pollería</p>
+        </div>
+
+        <div class="categoria-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png">
+            <p>Hamburguesas</p>
+        </div>
+
+        <div class="categoria-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/3595/3595455.png">
+            <p>Pizzas</p>
+        </div>
+
+        <div class="categoria-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/3480/3480618.png">
+            <p>Criolla</p>
+        </div>
+
+        <div class="categoria-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/2405/2405479.png">
+            <p>Bebidas</p>
+        </div>
+
+        <div class="categoria-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/3081/3081986.png">
+            <p>Postres</p>
+        </div>
+
+    </div>
+
+</section>
 
 <h2 class="titulo-menu">🍔 Menú de Comidas</h2>
 
@@ -73,7 +122,7 @@
         <td> <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1779238838/polloalabrasa_h5wiqb.png" class="img-comida"> </td>
         <td>Pollo a la brasa</td>
         <td>Incluye papas y ensalada</td>
-        <td><s>S/ 25</s></td>
+        <td><span class="precio-original">S/ 25</span></td>
         <td>S/ 15</td>
         <td>
             <form action="form_pedido.html">
@@ -86,7 +135,7 @@
         <td> <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1779239006/arroz_chaufa_liefin.jpg" class="img-comida"> </td>
         <td>Arroz Chaufa</td>
         <td>Porción grande</td>
-        <td><s>S/ 18</s></td>
+        <td><span class="precio-original">S/ 18</span></td>
         <td>S/ 10</td>
         <td>
             <form action="form_pedido.html">
@@ -99,7 +148,7 @@
         <td> <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1779239106/hamburguesa_q5o3ka.jpg" class="img-comida"> </td>
         <td>Hamburguesa</td>
         <td>Con papas fritas</td>
-        <td><s>S/ 20</s></td>
+        <td><span class="precio-original">S/ 20</span></td>
         <td>S/ 12</td>
         <td>
             <form action="form_pedido.html">
@@ -112,7 +161,7 @@
         <td> <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1779239189/lomo-saltado_1200x800_yrd3v9.jpg" class="img-comida"> </td>
         <td>Lomo Saltado</td>
         <td>Carne con papas y arroz</td>
-        <td><s>S/ 22</s></td>
+        <td><span class="precio-original">S/ 22</span></td>
         <td>S/ 14</td>
         <td>
             <form action="form_pedido.html">
@@ -125,7 +174,7 @@
         <td> <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1779239313/aji_gallina_hsldfe.jpg" class="img-comida"> </td>
         <td>Ají de Gallina</td>
         <td>Crema de pollo con arroz</td>
-        <td><s>S/ 20</s></td>
+        <td><span class="precio-original">S/ 20</span></td>
         <td>S/ 13</td>
         <td>
             <form action="form_pedido.html">
@@ -138,7 +187,7 @@
         <td> <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1779239396/tallarines_verdes_nnij2e.jpg" class="img-comida"> </td>
         <td>Tallarines Verdes</td>
         <td>Pasta con albahaca</td>
-        <td><s>S/ 18</s></td>
+        <td><span class="precio-original">S/ 18</span></td>
         <td>S/ 11</td>
         <td>
             <form action="form_pedido.html">
@@ -151,7 +200,7 @@
         <td> <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1779239548/pizza_wpykvv.jpg" class="img-comida"> </td>
         <td>Pizza Familiar</td>
         <td>Pizza mixta</td>
-        <td><s>S/ 30</s></td>
+        <td><span class="precio-original">S/ 30</span></td>
         <td>S/ 18</td>
         <td>
             <form action="form_pedido.html">
@@ -164,7 +213,7 @@
         <td> <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1779239641/salchipapas_gjwyfj.jpg" class="img-comida"> </td>
         <td>Salchipapas</td>
         <td>Papas con salchicha</td>
-        <td><s>S/ 12</s></td>
+        <td><span class="precio-original">S/ 12</span></td>
         <td>S/ 7</td>
         <td>
             <form action="form_pedido.html">
@@ -177,7 +226,7 @@
         <td> <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1779239734/ceviche_wzo8kc.jpg" class="img-comida"> </td>
         <td>Ceviche</td>
         <td>Pescado fresco</td>
-        <td><s>S/ 25</s></td>
+        <td><span class="precio-original">S/ 25</span></td>
         <td>S/ 16</td>
         <td>
             <form action="form_pedido.html">
@@ -190,7 +239,7 @@
         <td> <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1779239791/chicharron_pollo_ge73jk.jpg" class="img-comida"> </td>
         <td>Chicharrón de pollo</td>
         <td>Pollo crocante</td>
-        <td><s>S/ 20</s></td>
+        <td><span class="precio-original">S/ 20</span></td>
         <td>S/ 12</td>
         <td>
             <form action="form_pedido.html">
@@ -203,7 +252,7 @@
         <td> <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1779239106/hamburguesa_q5o3ka.jpg" class="img-comida"> </td>
         <td>Broaster</td>
         <td>Pollo frito</td>
-        <td><s>S/ 18</s></td>
+        <td><span class="precio-original">S/ 18</span></td>
         <td>S/ 11</td>
         <td>
             <form action="form_pedido.html">
@@ -216,7 +265,7 @@
         <td> <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1779239106/hamburguesa_q5o3ka.jpg" class="img-comida"> </td>
         <td>Ensalada César</td>
         <td>Lechuga y pollo</td>
-        <td><s>S/ 15</s></td>
+        <td><span class="precio-original">S/ 15</span></td>
         <td>S/ 9</td>
         <td>
             <form action="form_pedido.html">
@@ -229,7 +278,7 @@
         <td> <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1779239106/hamburguesa_q5o3ka.jpg" class="img-comida"> </td>
         <td>Hot Dog</td>
         <td>Pan con salchicha</td>
-        <td><s>S/ 10</s></td>
+        <td><span class="precio-original">S/ 10</span></td>
         <td>S/ 6</td>
         <td>
             <form action="form_pedido.html">
@@ -242,7 +291,7 @@
         <td> <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1779239106/hamburguesa_q5o3ka.jpg" class="img-comida"> </td>
         <td>Empanadas</td>
         <td>Carne o pollo</td>
-        <td><s>S/ 8</s></td>
+        <td><span class="precio-original">S/ 8</span></td>
         <td>S/ 5</td>
         <td>
             <form action="form_pedido.html">
@@ -255,7 +304,7 @@
         <td> <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1779239106/hamburguesa_q5o3ka.jpg" class="img-comida"> </td>
         <td>Arroz con Pollo</td>
         <td>Arroz verde</td>
-        <td><s>S/ 17</s></td>
+        <td><span class="precio-original">S/ 17</span></td>
         <td>S/ 10</td>
         <td>
             <form action="form_pedido.html">
@@ -276,27 +325,68 @@
 <hr>
 
 <footer>
-    <p>📧 contacto@refood.com</p>
-    <p>
-        <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776476222/whatsapp_ovkjco.png" width="30">
-        +51 987 654 321
-    </p>
-    <p><img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776564974/google-maps_gayzto.png" width="30"> Lima, Perú</p>
 
-    <p>
-        📱 Síguenos en redes:
-        <a href="#">Facebook</a> |
-        <a href="#">Instagram</a> |
-        <a href="#">TikTok</a>
-    </p>
+    <div class="footer-grid">
 
-    <p>
-    <a href="terminos.html">Términos y condiciones</a> |
-    <a href="privacidad.html">Política de privacidad</a>
-    </p>
+        <!-- CONTACTO -->
+        <div class="footer-box">
 
-    <p>🕒 Atención: Lunes a Domingo 9:00 am - 9:00 pm</p>
-    <p>© 2026 ReFood</p>
+            <p>
+                📧 contacto@refood.com
+            </p>
+
+            <p>
+                <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776476222/whatsapp_ovkjco.png" width="30">
+                +51 987 654 321
+            </p>
+
+            <p>
+                <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776564974/google-maps_gayzto.png" width="30">
+                Lima, Perú
+            </p>
+
+        </div>
+
+        <!-- REDES -->
+        <div class="footer-box">
+
+            <p>📱 Síguenos en redes:</p>
+
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">TikTok</a>
+
+        </div>
+
+        <!-- INFORMACION -->
+        <div class="footer-box">
+
+            <p>
+                <a href="terminos.html">
+                    Términos y condiciones
+                </a>
+            </p>
+
+            <p>
+                <a href="privacidad.html">
+                    Política de privacidad
+                </a>
+            </p>
+
+            <p>
+                🕒 Atención: Lunes a Domingo
+                9:00 am - 9:00 pm
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="copy">
+        © 2026 ReFood - Todos los derechos reservados
+    </div>
+
 </footer>
 </body>
 </html>
