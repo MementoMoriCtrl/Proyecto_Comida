@@ -518,6 +518,40 @@ footer a:hover{
 }
 
 /* ===================================== */
+/* ========== LOGIN SOCIAL ============= */
+/* ===================================== */
+
+.social-login{
+    display: flex;
+    flex-direction: column; /* uno debajo del otro */
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.social-btn{
+    width: 260px;
+    background: white;
+    color: black;
+    border: 2px solid rgb(215, 213, 213);
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover{
+    background: #f4b400; /* amarillo */
+    color: white;
+    transform: scale(1.08); /* se agranda */
+}
+
+.social-btn i{
+    margin-right: 8px;
+}
+
+/* ===================================== */
 /* ============ INICIO ================= */
 /* ===================================== */
 
