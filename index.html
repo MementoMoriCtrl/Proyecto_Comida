@@ -18,6 +18,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="inicio-body">
     <!-- HEADER -->
     <header>
@@ -27,6 +28,9 @@
             alt="Logo ReFood"
             width="400">
         </div>
+
+        <p id="usuarioLogueado"></p>
+
 
         <!-- NAV -->
         <nav>
@@ -56,14 +60,34 @@
                 Pedidos
             </a>
 
-            <a href="login.html">
-                <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" width="25">
-                Login
-            </a>
+    <div class="usuario-menu">
 
-            <a href="menu.html" class="btn-empezar">
-                Comenzar
-            </a>
+            <button id="btnUsuario" onclick="toggleMenuUsuario()">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" width="25">
+
+            <span id="nombreUsuarioNav">
+            Login
+            </span>
+
+            </button>
+
+        <div id="menuUsuario" class="menu-usuario">
+
+        <p id="datosUsuario"></p>
+
+        <a href="pedidos.html">
+            Mis pedidos
+        </a>
+
+        <button onclick="cerrarSesion()">
+            Cerrar sesión
+        </button>
+
+        </div>
+
+    </div>
+
 
         </nav>
 

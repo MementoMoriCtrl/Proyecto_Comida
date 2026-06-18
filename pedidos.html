@@ -38,9 +38,33 @@
             <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776564487/checklist_pkwoee.png" width="25"> Pedidos Realizados
         </a> &nbsp;&nbsp;&nbsp;
 
-        <a href="login.html">
-            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" width="25"> Login
-        </a>
+        <div class="usuario-menu">
+
+            <button id="btnUsuario" onclick="toggleMenuUsuario()">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" width="25">
+
+            <span id="nombreUsuarioNav">
+            Login
+            </span>
+
+            </button>
+
+            <div id="menuUsuario" class="menu-usuario">
+
+            <p id="datosUsuario"></p>
+
+            <a href="pedidos.html">
+                Mis pedidos
+            </a>
+
+            <button onclick="cerrarSesion()">
+                Cerrar sesión
+            </button>
+
+            </div>
+
+        </div>
 
         </font>
 
@@ -61,68 +85,24 @@
 <td>
 
 <table border="1">
-    <tr>
-        <th>N° Pedido</th>
-        <th>Cliente</th>
-        <th>Producto</th>
-        <th>Cantidad</th>
-        <th>Total</th>
-        <th>Estado</th>
-    </tr>
 
-    <tr>
-    <td>001</td>
-    <td>Juan Pérez</td>
-    <td>Pollo</td>
-    <td>2</td>
-    <td>S/ 30</td>
-    <td class="proceso">En proceso</td>
-</tr>
+    <thead>
 
-<tr>
-    <td>002</td>
-    <td>María López</td>
-    <td>Chaufa</td>
-    <td>1</td>
-    <td>S/ 10</td>
-    <td class="preparando">Preparando</td>
-</tr>
+        <tr>
+            <th>ID Pedido</th>
+            <th>Fecha y Hora</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Total</th>
+            <th>Estado</th>
+        </tr>
 
-<tr>
-    <td>003</td>
-    <td>Carlos Ramírez</td>
-    <td>Hamburguesa</td>
-    <td>2</td>
-    <td>S/ 24</td>
-    <td class="enviado">Enviado</td>
-</tr>
+    </thead>
 
-<tr>
-    <td>004</td>
-    <td>Lucía Torres</td>
-    <td>Lomo Saltado</td>
-    <td>1</td>
-    <td>S/ 14</td>
-    <td class="proceso">En proceso</td>
-</tr>
+    <tbody id="tablaPedidos">
 
-<tr>
-    <td>005</td>
-    <td>Pedro Gómez</td>
-    <td>Pizza mediana</td>
-    <td>3</td>
-    <td>S/ 24</td>
-    <td class="preparando">Preparando</td>
-</tr>
+    </tbody>
 
-<tr>
-    <td>006</td>
-    <td>Ana Fernández</td>
-    <td>Ají de Gallina</td>
-    <td>2</td>
-    <td>S/ 24</td>
-    <td class="enviado">Enviado</td>
-</tr>
 </table>
 
 </td>

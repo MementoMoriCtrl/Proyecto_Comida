@@ -36,9 +36,33 @@
             <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776564487/checklist_pkwoee.png" width="25"> Pedidos Realizados
         </a> &nbsp;&nbsp;&nbsp;
 
-        <a href="login.html">
-            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" width="25"> Login
-        </a>
+        <div class="usuario-menu">
+
+            <button id="btnUsuario" onclick="toggleMenuUsuario()">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" width="25">
+
+            <span id="nombreUsuarioNav">
+            Login
+            </span>
+
+            </button>
+
+                <div id="menuUsuario" class="menu-usuario">
+
+                <p id="datosUsuario"></p>
+
+                <a href="pedidos.html">
+                    Mis pedidos
+                </a>
+
+                <button onclick="cerrarSesion()">
+                    Cerrar sesión
+                </button>
+
+                </div>
+
+        </div>
 
         </font>
 
@@ -72,8 +96,13 @@
 
                 <span>Últimas unidades</span>
 
-                <a href="form_pedido.html" class="btn-oferta">
+                <a
+                    href="#"
+                    class="btn-oferta"
+                    onclick="pedirOferta('Combo ReFood')">
+
                     Pedir Ahora
+
                 </a>
 
             </div>
@@ -94,8 +123,13 @@
 
                 <span>Últimas unidades</span>
 
-                <a href="form_pedido.html" class="btn-oferta">
+                <a
+                    href="#"
+                    class="btn-oferta"
+                    onclick="pedirOferta('Mega Burger XL')">
+
                     Pedir Ahora
+
                 </a>
 
             </div>
@@ -116,7 +150,11 @@
 
                 <span>¡Apresúrate!</span>
 
-                <a href="form_pedido.html" class="btn-oferta">
+                <a
+                    href="#"
+                    class="btn-oferta"
+                    onclick="pedirOferta('Salchi Monster')">
+
                     Pedir Ahora
                 </a>
 
@@ -138,8 +176,13 @@
 
                 <span>Stock limitado</span>
 
-                <a href="form_pedido.html" class="btn-oferta">
+                <a
+                    href="#"
+                    class="btn-oferta"
+                    onclick="pedirOferta('Taco Mix')">
+
                     Pedir Ahora
+
                 </a>
 
             </div>
@@ -160,8 +203,13 @@
 
                 <span>Últimas porciones</span>
 
-                <a href="form_pedido.html" class="btn-oferta">
+                <a
+                    href="#"
+                    class="btn-oferta"
+                    onclick="pedirOferta('Meat House')">
+
                     Pedir Ahora
+
                 </a>
 
             </div>
@@ -182,8 +230,13 @@
 
                 <span>¡Se agotan rápido!</span>
 
-                <a href="form_pedido.html" class="btn-oferta">
+                <a
+                    href="#"
+                    class="btn-oferta"
+                    onclick="pedirOferta('Crunchy Mix')">
+
                     Pedir Ahora
+
                 </a>
 
             </div>
@@ -204,8 +257,13 @@
 
                 <span>Promoción del día</span>
 
-                <a href="form_pedido.html" class="btn-oferta">
+                <a
+                    href="#"
+                    class="btn-oferta"
+                    onclick="pedirOferta('Chinese Combo')">
+
                     Pedir Ahora
+
                 </a>
 
             </div>
@@ -226,7 +284,11 @@
 
                 <span>Solo por hoy</span>
 
-                <a href="form_pedido.html" class="btn-oferta">
+                <a
+                    href="#"
+                    class="btn-oferta"
+                    onclick="pedirOferta('Bisteck a lo pobre')">
+
                     Pedir Ahora
                 </a>
 
@@ -248,7 +310,11 @@
 
                 <span>Stock limitado</span>
 
-                <a href="form_pedido.html" class="btn-oferta">
+                <a
+                    href="#"
+                    class="btn-oferta"
+                    onclick="pedirOferta('Combo Sushi')">
+
                     Pedir Ahora
                 </a>
 
@@ -270,8 +336,13 @@
 
                 <span>Solo por hoy</span>
 
-                <a href="form_pedido.html" class="btn-oferta">
+                <a
+                    href="#"
+                    class="btn-oferta"
+                    onclick="pedirOferta('Combo Marino')">
+
                     Pedir Ahora
+
                 </a>
 
             </div>
@@ -290,7 +361,11 @@
 
                 <span>Últimas porciones</span>
 
-                <a href="form_pedido.html" class="btn-oferta">
+                <a
+                    href="#"
+                    class="btn-oferta"
+                    onclick="pedirOferta('Mega Nuggets de Pollo')">
+
                     Pedir Ahora
                 </a>
 
@@ -311,8 +386,13 @@
 
                 <span>Última unidad</span>
 
-                <a href="form_pedido.html" class="btn-oferta">
+                <a
+                    href="#"
+                    class="btn-oferta"
+                    onclick="pedirOferta('Menú Megaeconómico')">
+
                     Pedir Ahora
+
                 </a>
 
             </div>
