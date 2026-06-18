@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Pago - ReFood</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<h2 class="titulo-pago">
+    💳 Confirmar Pago
+</h2>
+
+<button
+    onclick="window.location.href='form_pedido.html'"
+    class="btn-volver">
+
+    ⬅ Volver al pedido
+
+</button>
+
+<div class="card-pago">
+
+    <h3>🧾 Resumen del Pedido</h3>
+
+    <div class="resumen-pago">
+
+    <p>
+        <strong>Productos:</strong>
+    </p>
+
+    <div id="detallePago"></div>
+
+    <p class="total-pago">
+        <strong>Total:</strong>
+        S/
+        <span id="totalPago">0</span>
+    </p>
+
+</div>
+
+    <hr>
+
+    <h3>💰 Método de Pago</h3>
+
+    <select id="metodoPago">
+
+        <option>Yape</option>
+        <option>Plin</option>
+        <option>Tarjeta de Crédito</option>
+        <option>Tarjeta de Débito</option>
+        <option>Efectivo</option>
+
+    </select>
+
+    <br>
+
+    <button
+        onclick="confirmarPago()"
+        class="btn-pagar">
+
+        Confirmar Pago
+
+    </button>
+
+
+    <button
+        onclick="cancelarDesdePago()"
+        class="btn-cancelar-pago">
+
+        Cancelar Pedido
+
+    </button>
+
+</div>
+
+<script src="js/main.js"></script>
+
+
+</body>
+</html>

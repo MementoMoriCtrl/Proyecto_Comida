@@ -338,7 +338,7 @@ footer a:hover{
 @keyframes aparecer{
     from{
         opacity: 0;
-        transform: translateY(-100px);
+        transform: translateY(30px);
     }
 
     to{
@@ -517,79 +517,38 @@ footer a:hover{
     text-decoration: underline;
 }
 
-/* LOGIN SOCIAL */
+/* ===================================== */
+/* ========== LOGIN SOCIAL ============= */
+/* ===================================== */
 
-.registro-social{
-
-    display: grid;
-
-    gap: 18px;
-
-    margin-top: 35px;
+.social-login{
+    display: flex;
+    flex-direction: column; /* uno debajo del otro */
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
 }
 
 .social-btn{
-
-    width: 72%;
-
-    margin: auto;
-
+    width: 260px;
     background: white;
-
-    color: #222;
-
-    border: 2px solid #dcdcdc;
-
-    padding: 14px 22px;
-
-    border-radius: 18px;
-
-    font-size: 18px;
-
-    font-weight: 600;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 14px;
-
+    color: black;
+    border: 2px solid rgb(215, 213, 213);
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-weight: bold;
     cursor: pointer;
-
-    transition: 0.3s;
-
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.social-btn i{
-
-    width: 28px;
-
-    text-align: center;
-
-    font-size: 22px;
+    transition: all 0.3s ease;
 }
 
 .social-btn:hover{
-
-    background: #f4b400;
-
+    background: #f4b400; /* amarillo */
     color: white;
-
-    transform: translateY(-3px) scale(1.03);
-
-    box-shadow: 0 8px 18px rgba(244,180,0,0.35);
+    transform: scale(1.08); /* se agranda */
 }
 
-.social-btn span{
-
-    width: 30px;
-
-    text-align: center;
-
-    font-size: 22px;
+.social-btn i{
+    margin-right: 8px;
 }
 
 /* ===================================== */
@@ -634,12 +593,18 @@ footer a:hover{
 
 .categorias-rappi{
     background: rgba(235,245,230,0.75);
-    padding: 18px 30px;
+    padding: 50px 30px 25px 30px;
     border-radius: 28px;
     margin-top: 30px;
     margin-bottom: 45px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.06);
     backdrop-filter: blur(6px);
+    overflow: visible;
+}
+.categorias-scroll{
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
 }
 
 .filtros-top{
@@ -690,18 +655,23 @@ footer a:hover{
     text-align: center;
     cursor: pointer;
     transition: 0.3s;
+
+    padding: 15px 0;
 }
 
 .categoria-item img{
-    width: 65px;
-    height: 65px;
+    width: 75px;
+    height: 75px;
     object-fit: cover;
     border-radius: 50%;
     background: white;
     padding: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     transition: 0.3s;
+    align-items: center;
+    
 }
+
 
 .categoria-item p{
     margin-top: 10px;
@@ -710,7 +680,7 @@ footer a:hover{
 }
 
 .categoria-item:hover{
-    transform: translateY(-5px) scale(1.05);
+    transform: translateY(-3px);
 }
 
 /* ===================================== */
@@ -735,7 +705,7 @@ footer a:hover{
 }
 
 .pedido-card{
-    width: 650px;
+    width: 700px;
     background: #fffdf4;
     padding: 40px;
     border-radius: 25px;
@@ -825,6 +795,35 @@ footer a:hover{
     width: 38px;
     height: 38px;
     object-fit: contain;
+}
+
+.plato-extra{
+
+    margin-top: 20px;
+    padding: 20px;
+
+    background: #f8f8f8;
+
+    border-radius: 12px;
+
+    border-left: 5px solid #1f7a4c;
+
+}
+
+.btn-eliminar{
+
+    background: #dc3545;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 15px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
 }
 
 /* ===================================== */
@@ -1040,4 +1039,589 @@ footer a:hover{
     td{
         padding: 8px;
     }
+}
+
+/*--BOTON USUARIO Y MENU -- */
+.usuario-menu{
+    position: relative;
+    display: inline-block;
+}
+
+#btnUsuario{
+    border: none;
+    background: white;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    min-width: 150px;
+}
+#btnUsuario:hover{
+    background: #f4b400; /* amarillo */
+    color: white;
+    transition: 0.3s;
+}
+
+#btnUsuario:hover img{
+    filter: brightness(0) invert(1);
+}
+#nombreUsuarioNav{
+    color: black;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.menu-usuario{
+    display: none;
+
+    position: absolute;
+
+    top: 60px;
+    right: 0;
+
+    width: 250px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+
+    padding: 15px;
+
+    z-index: 999;
+}
+
+.mostrar-menu{
+    display: block;
+}
+
+.menu-usuario p{
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.menu-usuario a{
+    display: block;
+    width: 100%;
+
+    padding: 10px;
+    border-radius: 8px;
+
+    background: #2e8b57;
+    color: white;
+
+    text-decoration: none;
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 10px;
+}
+
+.menu-usuario button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #dc3545; /* rojo */
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-usuario button:hover{
+    background: #b02a37; /* rojo más oscuro */
+    transform: scale(1.05);
+}
+/*BUSCADOR EN MENU */
+
+.buscador-menu{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#buscarProducto{
+    width: 400px;
+    max-width: 90%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    font-size: 16px;
+}
+
+#buscarProducto:focus{
+    border-color: #1f7a4c;
+}
+
+.buscador-menu{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#buscarProducto{
+    width: 400px;
+    max-width: 90%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    font-size: 16px;
+}
+
+#buscarProducto:focus{
+    border-color: #1f7a4c;
+}
+
+
+.categoria-activa img{
+    background: #f4b400;
+    box-shadow: 0 0 8px rgba(244,180,0,0.4);
+}
+
+.categoria-activa p{
+    color: #f4b400;
+    font-weight: bold;
+}
+
+/*ESTILOS RESUMEN PEDIDO */
+
+.resumen-pedido{
+
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    width: 280px;
+
+    height: fit-content;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+.resumen-pedido h3{
+
+    color: #1f7a4c;
+
+    margin-bottom: 20px;
+
+}
+
+.resumen-pedido p{
+
+    margin: 15px 0;
+
+    font-size: 17px;
+
+}
+
+/*ESTILOS PRODUCTO SELECCIONADO */
+
+.producto-seleccionado{
+
+    background: #e8f7ea;
+
+    border-left: 5px solid #1f7a4c;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    margin: 20px 0;
+
+}
+
+
+/* ===================================== */
+/* ======== MEJORAS VISUALES PEDIDO ==== */
+/* ===================================== */
+
+.resumen-pedido{
+
+    position: sticky;
+    top: 20px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    width: 300px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+
+    border-top: 5px solid #1f7a4c;
+
+}
+
+#listaResumen{
+
+    line-height: 2;
+
+    font-size: 15px;
+
+}
+
+#resumenTotal{
+
+    color: #1f7a4c;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+}
+
+.plato-extra{
+
+    background: #ffffff;
+
+    border-left: 6px solid #1f7a4c;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    margin-top: 25px;
+
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+
+}
+
+.plato-extra:hover{
+
+    transform: translateY(-3px);
+
+}
+
+.plato-extra h4{
+
+    text-align: center;
+
+    color: #1f7a4c;
+
+    font-size: 32px;
+
+    margin-bottom: 20px;
+
+}
+
+.btn-eliminar{
+
+    background: #dc3545;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+}
+
+.btn-eliminar:hover{
+
+    background: #b02a37;
+
+}
+
+.producto-seleccionado{
+
+    background: #eaf8ec;
+
+    border-left: 6px solid #1f7a4c;
+
+    padding: 20px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+
+}
+
+#nombreProductoSeleccionado{
+
+    line-height: 2;
+
+    font-size: 15px;
+
+}
+
+/* BOTON AGREGAR PLATO EXTRA */
+
+.btn-agregar{
+
+    background: #f4b400;
+
+    color: white;
+
+    font-weight: bold;
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+
+    margin-top: 20px;
+    margin-bottom: 15px;
+
+}
+
+.btn-agregar:hover{
+
+    background: #d89c00;
+
+    transform: scale(1.05);
+
+}
+
+.plato-principal{
+
+    margin-top: 20px;
+    padding: 25px;
+
+    background: #f8f8f8;
+
+    border-radius: 18px;
+
+    border-left: 5px solid #1f7a4c;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
+}
+
+/*ESTILOS PEDIDOS REALIZADOS */
+td[colspan]{
+
+    text-align: center;
+
+    font-weight: bold;
+
+    padding: 25px;
+
+    color: #666;
+
+}
+
+/* ==========================
+   PAGO
+========================== */
+
+.titulo-pago{
+
+    text-align:center;
+    color:#0c7c59;
+    margin-top:40px;
+    margin-bottom:0px;
+
+}
+
+.card-pago{
+
+    width:500px;
+    margin:0px auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+.resumen-pago{
+
+    background:#f4f7f4;
+    padding:20px;
+    border-radius:12px;
+
+}
+
+.resumen-pago p{
+
+    font-size:18px;
+    margin:15px 0;
+
+}
+
+#metodoPago{
+
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    font-size:16px;
+
+}
+
+.btn-pagar{
+
+    width:100%;
+    padding:15px;
+
+    background:#198754;
+    color:white;
+
+    border:none;
+    border-radius:12px;
+
+    font-size:18px;
+    cursor:pointer;
+
+}
+
+.btn-pagar:hover{
+
+    background:#146c43;
+
+}
+
+.btn-volver{
+
+    margin-left:20px;
+    margin-bottom:20px;
+
+    padding:10px 20px;
+
+    border:none;
+    border-radius:10px;
+
+    background:#6c757d;
+    color:white;
+
+    cursor:pointer;
+
+}
+
+.btn-volver:hover{
+
+    background:#565e64;
+
+}
+
+/* TARJETA DE PAGO */
+.card-pago{
+    width: 500px;
+    margin: 40px auto;
+    background: #f8f8f8;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* RESUMEN */
+.resumen-pago{
+    background: #eef3ee;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* PRODUCTOS */
+#detallePago{
+    line-height: 1.8;
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* TOTAL */
+.total-pago{
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 2px solid #d6d6d6;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: right;
+    color: #0b7a3f;
+}
+
+#totalPago{
+    font-size: 32px;
+    color: #0b7a3f;
+}
+
+/* SELECT */
+#metodoPago{
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* BOTON PAGAR */
+.btn-pagar{
+    width: 250px;
+    background: #f4b400;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin: 20px auto 5px auto;
+}
+
+.btn-pagar:hover{
+    background: #d89c00;
+    transform: translateY(-2px);
+}
+
+/* BOTON CANCELAR */
+.btn-cancelar-pago{
+    width: 250px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin: 5px auto 0 auto;
+}
+
+.btn-cancelar-pago:hover{
+    background: #bb2d3b;
+    transform: translateY(-2px);
+}
+
+.item-resumen{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.item-resumen span:last-child{
+    font-weight: bold;
+    color: #0d7a47;
+}
+
+.productos-pedido{
+    text-align: left;
+    line-height: 1.8;
+    padding: 10px;
 }

@@ -38,9 +38,33 @@
             <img src="https://res.cloudinary.com/dk25vjxwa/image/upload/v1776564487/checklist_pkwoee.png" width="25"> Pedidos Realizados
         </a> &nbsp;&nbsp;&nbsp;
 
-        <a href="login.html">
-            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" width="25"> Login
-        </a>
+        <div class="usuario-menu">
+
+            <button id="btnUsuario" onclick="toggleMenuUsuario()">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" width="25">
+
+            <span id="nombreUsuarioNav">
+            Login
+            </span>
+
+            </button>
+
+            <div id="menuUsuario" class="menu-usuario">
+
+            <p id="datosUsuario"></p>
+
+            <a href="pedidos.html">
+                Mis pedidos
+            </a>
+
+            <button onclick="cerrarSesion()">
+                Cerrar sesión
+            </button>
+
+            </div>
+
+        </div>
 
         </font>
 
@@ -62,11 +86,11 @@
 
     <div class="pedido-card">
 
-        <form action="pago.html" method="get">
+        <form action="pago.html" method="get" onsubmit="guardarPedido()">
 
             <label>Nombre del cliente:</label>
 
-            <input type="text" placeholder="Ingrese su nombre" required>
+            <input type="text" id="nombreCliente" placeholder="Ingrese su nombre" required>
 
             <label>Dirección:</label>
 
@@ -75,6 +99,19 @@
             <label>Teléfono:</label>
 
             <input type="text" placeholder="Ingrese su teléfono" required>
+
+            
+        <div id="productoSeleccionado" class="producto-seleccionado">
+
+            <h3>
+                🛒 Producto seleccionado
+            </h3>
+
+            <p id="nombreProductoSeleccionado">
+                Ningún producto seleccionado
+            </p>
+
+        </div>
 
         <h4 class="titulo-armar">
 
@@ -88,99 +125,80 @@
 
             <!-- PRIMER PLATO -->
 
-            <label>Plato:</label>
+            
+        <div class="plato-principal">
 
-            <select>
+        <h4>🍽 Plato 1</h4>
 
-                <option disabled selected>
-                    Seleccione un plato
-                </option>
+        <label>Plato:</label>
 
-                <option>Pollo a la brasa</option>
+        <select id="plato" onchange="actualizarResumen()">
 
-                <option>Arroz Chaufa</option>
+        <option value="" disabled selected>
+            Seleccione un plato
+        </option>
 
-                <option>Hamburguesa</option>
+        <option value="Pollo a la brasa">Pollo a la brasa</option>
+        <option value="Arroz Chaufa">Arroz Chaufa</option>
+        <option value="Hamburguesa">Hamburguesa</option>
+        <option value="Lomo Saltado">Lomo Saltado</option>
+        <option value="Ají de Gallina">Ají de Gallina</option>
+        <option value="Tallarines Verdes">Tallarines Verdes</option>
+        <option value="Pizza Familiar">Pizza Familiar</option>
+        <option value="Salchipapas">Salchipapas</option>
+        <option value="Ceviche">Ceviche</option>
+        <option value="Chicharrón de pollo">Chicharrón de pollo</option>
+        <option value="Broaster">Broaster</option>
+        <option value="Ensalada César">Ensalada César</option>
+        <option value="Hot Dog">Hot Dog</option>
+        <option value="Empanadas">Empanadas</option>
+        <option value="Arroz con Pollo">Arroz con Pollo</option>
+        <option value="Combo ReFood">Combo ReFood</option>
+        <option value="Mega Burger XL">Mega Burger XL</option>
+        <option value="Salchi Monster">Salchi Monster</option>
+        <option value="Combo Sushi">Combo Sushi</option>
+        <option value="Combo Marino">Combo Marino</option>
+        <option value="Bisteck a lo pobre">Bisteck a lo pobre</option>
+        <option value="Menú Megaeconómico">Menú Megaeconómico</option>
+        <option value="Taco Mix">Taco Mix</option>
+        <option value="Crunchy Mix">Crunchy Mix</option>
+        <option value="Chinese Combo">Chinese Combo</option>
+        <option value="Meat House">Meat House</option>
+        <option value="Mega Nuggets de Pollo">Mega Nuggets de Pollo</option>    
 
-                <option>Lomo Saltado</option>
+    </select>
 
-                <option>Ají de Gallina</option>
+    <label>Cantidad:</label>
 
-                <option>Tallarines Verdes</option>
+    <input
+        type="number"
+        min="1"
+        value="1"
+        id="cantidadPrincipal"
+        oninput="actualizarResumen()">
 
-                <option>Pizza Familiar</option>
+</div>
 
-                <option>Salchipapas</option>
 
-                <option>Ceviche</option>
+            <button
+                type="button"
+                class="btn-agregar"
+                onclick="agregarPlato()">
 
-                <option>Chicharrón de pollo</option>
+                ➕ Agregar otro plato
 
-                <option>Broaster</option>
+            </button>
 
-                <option>Ensalada César</option>
+            <br><br>
 
-                <option>Hot Dog</option>
+            <div id="platosExtras"></div>    
 
-                <option>Empanadas</option>
+            <button
+                type="button"
+                class="btn-pedido"
+                onclick="irAPago()">
 
-                <option>Arroz con Pollo</option>
-
-            </select>
-
-            <label>Cantidad:</label>
-
-            <input type="number" min="1" placeholder="Cantidad">
-
-            <!-- SEGUNDO PLATO -->
-
-            <label>Segundo plato:</label>
-
-            <select>
-
-                <option disabled selected>
-                    Seleccione un plato
-                </option>
-
-                <option>Pollo a la brasa</option>
-
-                <option>Arroz Chaufa</option>
-
-                <option>Hamburguesa</option>
-
-                <option>Lomo Saltado</option>
-
-                <option>Ají de Gallina</option>
-
-                <option>Tallarines Verdes</option>
-
-                <option>Pizza Familiar</option>
-
-                <option>Salchipapas</option>
-
-                <option>Ceviche</option>
-
-                <option>Chicharrón de pollo</option>
-
-                <option>Broaster</option>
-
-                <option>Ensalada César</option>
-
-                <option>Hot Dog</option>
-
-                <option>Empanadas</option>
-
-                <option>Arroz con Pollo</option>
-
-            </select>
-
-            <label>Cantidad:</label>
-
-            <input type="number" min="1" placeholder="Cantidad">
-
-            <button type="submit" class="btn-pedido">
-
-                Enviar Pedido
+                Continuar al Pago
 
             </button>
 
@@ -188,44 +206,54 @@
 
     </div>
 
-    <!-- IMAGEN -->
+    <!-- RESUMEN PEDIDO -->
+    <div class="resumen-pedido">
 
-    <div class="pedido-imagen">
+    <h3>🧾 Resumen del Pedido</h3>
 
-        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=900"
-        alt="Comida ReFood"
-        class="pedido-img">
+    <div id="listaResumen">
 
-        <div class="platos-destacados">
-
-    <div class="mini-plato">
-        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=500">
-        
-    </div>
-
-    <div class="mini-plato">
-        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=500">
-        
-        
-    </div>
-
-    <div class="mini-plato">
-        <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?q=80&w=500">
+        Ningún plato seleccionado
 
     </div>
 
-</div>
+    <hr>
+
+    <p>
+
+        <strong>Total de platos:</strong>
+
+        <span id="resumenCantidad">
+
+            0
+
+        </span>
+
+    </p>
+    
+    <hr>
+
+            <p>
+
+                <strong>Total:</strong>
+
+                S/
+
+                <span id="resumenTotal">
+
+                    0
+
+                </span>
+
+            </p>
 
     </div>
+
 
 </div>
 
 <br>
-<a href="menu.html">← Volver al menú</a>
-<a href="index.html">← Volver al inicio</a>
 
-
-<hr>
 
 <footer>
 
@@ -291,6 +319,8 @@
     </div>
 
 </footer>
+
+<script src="js/main.js"></script>
 
 </body>
 </html>
