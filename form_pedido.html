@@ -86,7 +86,7 @@
 
     <div class="pedido-card">
 
-        <form action="pago.html" method="get" onsubmit="guardarPedido()">
+        <form onsubmit="event.preventDefault(); irAPago();">
 
             <label>Nombre del cliente:</label>
 
@@ -98,7 +98,12 @@
 
             <label>Teléfono:</label>
 
-            <input type="text" placeholder="Ingrese su teléfono" required>
+            <input
+                type="tel"
+                id="telefono"
+                placeholder="987654321"
+                maxlength="9"
+                required>
 
             
         <div id="productoSeleccionado" class="producto-seleccionado">

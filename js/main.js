@@ -17,6 +17,47 @@ if (formRegistro) {
         let password = document.getElementById("password").value;
         let confirmarPassword = document.getElementById("confirmarPassword").value;
 
+        // VALIDAR NOMBRE
+
+        if(nombre.trim().length < 3){
+
+            alert(
+                "El nombre debe tener mínimo 3 caracteres"
+            );
+
+            return;
+
+        }
+
+
+        // VALIDAR CORREO
+
+        const regexCorreo =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if(!regexCorreo.test(correo)){
+
+            alert(
+                "Ingrese un correo electrónico válido"
+            );
+
+            return;
+
+        }
+
+
+        // VALIDAR CONTRASEÑA
+
+        if(password.length < 4){
+
+            alert(
+                "La contraseña debe tener mínimo 4 caracteres"
+            );
+
+            return;
+
+        }
+
         if (password !== confirmarPassword) {
 
             alert("Las contraseñas no coinciden");
@@ -62,7 +103,8 @@ if (formRegistro) {
 
         alert(data.mensaje);
 
-        window.location.href = "login.html";
+        window.location.href =
+            "login.html";
 
     })
 
@@ -807,7 +849,7 @@ document.addEventListener("DOMContentLoaded", function(){
 // GUARDAR PEDIDO
 // ======================================
 
-function guardarPedido(){
+async function guardarPedido(){
 
     let pedidos =
     JSON.parse(localStorage.getItem("pedidos")) || [];
@@ -831,7 +873,7 @@ function guardarPedido(){
 
     let nuevoPedido = {
 
-    id: String(pedidos.length + 1).padStart(3, "0"),
+    id: pedidos.length + 1,
 
     fecha:
     fechaHora,
@@ -846,7 +888,10 @@ function guardarPedido(){
     total,
 
     estado:
-    "En proceso"
+    "Preparando",
+
+    tiempoCreacion: Date.now()
+
 
 };
 
@@ -875,32 +920,38 @@ function guardarPedido(){
     console.log("ANTES DEL FETCH");
     console.log(nuevoPedido);
 
-    fetch("http://localhost:3000/pedido", {
+    const response = await fetch(
+    "http://localhost:3000/pedido",
+    {
+        method: "POST",
 
-    method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
 
-    headers: {
-        "Content-Type": "application/json"
-    },
+        body: JSON.stringify(nuevoPedido)
+    }
+);
 
-    body: JSON.stringify(nuevoPedido)
+const data = await response.json();
 
-})
+console.log(data.mensaje);
 
-.then(response => response.json())
+nuevoPedido.idSQLite =
+    data.idSQLite;
 
-.then(data => {
+pedidos[pedidos.length - 1] =
+    nuevoPedido;
 
-    console.log(data.mensaje);
+localStorage.setItem(
+    "pedidos",
+    JSON.stringify(pedidos)
+);
 
-})
-
-.catch(error => {
-
-    console.log(error);
-
-});
-
+console.log(
+    "ID SQLITE:",
+    data.idSQLite
+);
 
 }
 
@@ -946,6 +997,30 @@ document.addEventListener("DOMContentLoaded", function(){
 
     pedidos.forEach(pedido => {
 
+        if(
+        pedido.estado === "Preparando" &&
+        Date.now() - pedido.tiempoCreacion >= 20000
+        ){
+
+            pedido.estado = "Entregado";
+
+            fetch(
+                "http://localhost:3000/pedido/" + pedido.idSQLite,
+                {
+                    method: "PUT",
+
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+
+                    body: JSON.stringify({
+                        estado: "Entregado"
+                    })
+                }
+            );
+
+        }
+
         tablaPedidos.innerHTML += `
 
         <tr>
@@ -965,9 +1040,9 @@ document.addEventListener("DOMContentLoaded", function(){
             <td class="${
                 pedido.estado === 'Preparando'
                     ? 'preparando'
-                    : pedido.estado === 'Enviado'
-                    ? 'enviado'
-                    : 'proceso'
+                    : pedido.estado === 'Entregado'
+                    ? 'entregado'
+                    : 'cancelado'
             }">
                 ${pedido.estado}
             </td>
@@ -978,6 +1053,11 @@ document.addEventListener("DOMContentLoaded", function(){
 `;
 
     });
+
+    localStorage.setItem(
+    "pedidos",
+    JSON.stringify(pedidos)
+);
 
 });
 
@@ -1000,15 +1080,15 @@ function confirmarPago(){
 
     if(pedidos.length > 0){
 
-        pedidos[pedidos.length - 1].estado =
-        "Preparando";
+    pedidos[pedidos.length - 1].estado =
+    "Preparando";
 
-        localStorage.setItem(
-            "pedidos",
-            JSON.stringify(pedidos)
-        );
+    localStorage.setItem(
+        "pedidos",
+        JSON.stringify(pedidos)
+    );
 
-    }
+}
 
     alert(
         "✅ Pago realizado con " +
@@ -1038,12 +1118,27 @@ function cancelarDesdePago(){
 
     if(pedidos.length > 0){
 
-        pedidos.pop();
+    fetch(
+    "http://localhost:3000/pedido/" +
+    pedidos[pedidos.length - 1].idSQLite,
+    {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            estado: "Cancelado"
+        })
+    }
+    );
 
-        localStorage.setItem(
-            "pedidos",
-            JSON.stringify(pedidos)
-        );
+    pedidos[pedidos.length - 1].estado =
+    "Cancelado";
+
+    localStorage.setItem(
+        "pedidos",
+        JSON.stringify(pedidos)
+    );
 
     }
 
@@ -1058,22 +1153,125 @@ function cancelarDesdePago(){
 // IR A PAGO
 // ======================================
 
-function irAPago(){
+async function irAPago(){
 
-    console.log("IR A PAGO EJECUTADO");
-    alert("Entró a irAPago");
+    let telefono =
+    document.getElementById(
+        "telefono"
+    ).value.trim();
 
-    guardarPedido();
 
-    console.log(
-        localStorage.getItem("detallePago")
-    );
+    // VALIDAR CELULAR
 
-    console.log(
-        localStorage.getItem("totalPago")
-    );
+    const regexTelefono =
+    /^9\d{8}$/;
+
+
+    if(!regexTelefono.test(telefono)){
+
+        alert(
+            "Ingrese un número celular válido de 9 dígitos"
+        );
+
+        return;
+
+    }
+
+
+    await guardarPedido();
 
     window.location.href =
-    "pago.html";
+        "pago.html";
 
 }
+
+// ===================================
+// OFERTA DEL DIA ANIMADA
+// ===================================
+
+const oferta = document.getElementById("ofertaDia");
+
+if (oferta) {
+
+    setInterval(() => {
+
+        oferta.style.visibility =
+            oferta.style.visibility === "hidden"
+            ? "visible"
+            : "hidden";
+
+    }, 1400);
+
+}
+
+
+// =====================================
+// MODO OSCURO
+// =====================================
+
+function cambiarModo(){
+
+    document.body.classList.toggle(
+        "modo-oscuro"
+    );
+
+
+    let modoOscuro =
+
+        document.body.classList.contains(
+            "modo-oscuro"
+        );
+
+
+    localStorage.setItem(
+        "modoOscuro",
+        modoOscuro
+    );
+
+
+    let boton =
+
+        document.getElementById(
+            "btnModo"
+        );
+
+
+
+}
+
+
+
+// CARGAR EL MODO GUARDADO
+
+window.addEventListener(
+
+    "load",
+
+    function(){
+
+        let modoGuardado =
+
+            localStorage.getItem(
+                "modoOscuro"
+            );
+
+
+        if(modoGuardado === "true"){
+
+            document.body.classList.add(
+                "modo-oscuro"
+            );
+
+
+            let boton =
+
+                document.getElementById(
+                    "btnModo"
+                );
+
+
+        }
+
+    }
+
+);

@@ -908,14 +908,6 @@ footer a:hover{
 /* ======== PEDIDOS REALIZADOS ========= */
 /* ===================================== */
 
-.proceso{
-    background-color: #ffe082;
-    color: #5d4037;
-    font-weight: bold;
-    border-radius: 10px;
-    text-align: center;
-}
-
 .preparando{
     background-color: #81d4fa;
     color: #01579b;
@@ -924,9 +916,17 @@ footer a:hover{
     text-align: center;
 }
 
-.enviado{
+.entregado{
     background-color: #a5d6a7;
     color: #1b5e20;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.cancelado{
+    background-color: #ef9a9a;
+    color: #b71c1c;
     font-weight: bold;
     border-radius: 10px;
     text-align: center;
@@ -1624,4 +1624,247 @@ td[colspan]{
     text-align: left;
     line-height: 1.8;
     padding: 10px;
+}
+
+/* OFERTA DEL DIA */
+.oferta-dia{
+    background-color: rgba(183, 28, 28, 0.85);
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 15px;
+}
+
+.oferta-dia h2{
+    color: #ffd600;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.oferta-dia p{
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.oferta-dia img{
+    border-radius: 10px;
+}
+
+/*BOTON PEDIR AHORA EN OFERTA EN INICIO*/
+.btn-oferta{
+    background-color: #ffd600;
+    color: #b71c1c;
+    border: none;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn-oferta:hover{
+    background-color: white;
+    transform: scale(1.05);
+}
+
+/*=================================
+SWITCH MODO CLARO / OSCURO
+=================================*/
+
+.toggle-modo{
+
+    width: 90px;
+
+    height: 42px;
+
+    background: orange;
+
+    border-radius: 50px;
+
+    position: relative;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 12px;
+
+    transition: 0.4s;
+
+}
+
+
+.circulo-toggle{
+
+    width: 34px;
+
+    height: 34px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    left: 52px;
+
+    transition: 0.4s;
+
+}
+
+
+.icono-sol,
+.icono-luna{
+
+    font-size: 18px;
+
+    z-index: 2;
+
+}
+
+.toggle-modo{
+
+    overflow: hidden;
+
+}
+
+/* MODO OSCURO */
+
+body.modo-oscuro .toggle-modo{
+
+    background: black;
+
+}
+
+
+body.modo-oscuro .circulo-toggle{
+
+    left: 4px;
+
+}
+
+/*=================================
+MODO OSCURO
+=================================*/
+
+body.modo-oscuro{
+
+    background-color: #121212;
+}
+
+
+/* SECCIONES */
+
+body.modo-oscuro section{
+
+    background: #1f1f1f;
+
+    color: #e0e0e0;
+
+}
+
+
+/* TITULOS */
+
+body.modo-oscuro h1,
+body.modo-oscuro h2,
+body.modo-oscuro h3{
+
+    color: #4CAF50;
+
+}
+
+
+/* PARRAFOS Y LISTAS */
+
+body.modo-oscuro p,
+body.modo-oscuro li{
+
+    color: #e0e0e0;
+
+}
+
+
+/* LINKS */
+
+body.modo-oscuro a{
+
+    color: #7db9ff;
+
+}
+
+
+/* NAV */
+
+body.modo-oscuro nav{
+
+    background: #181818;
+
+}
+
+
+/* FOOTER */
+
+body.modo-oscuro footer{
+
+    background: #181818;
+
+    color: white;
+
+}
+
+
+/* ENLACES DEL FOOTER */
+
+body.modo-oscuro footer a{
+
+    color: #7db9ff;
+
+}
+
+
+/* INPUTS */
+
+body.modo-oscuro input{
+
+    background: #2d2d2d;
+
+    color: white;
+
+    border: 1px solid #666;
+
+}
+
+
+/* OFERTA DEL DIA */
+
+body.modo-oscuro .oferta-dia{
+
+    background: #2a2a2a;
+
+    color: white;
+
+}
+
+body.modo-oscuro.inicio-body{
+
+    background-image: none;
+
+    background-color: #121212;
+
+}
+
+body.modo-oscuro .logo-container{
+
+    background: #1f1f1f;
+
+    border-radius: 20px;
+
 }

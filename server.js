@@ -124,7 +124,8 @@ app.post("/pedido", (req, res) => {
             }
 
             res.json({
-                mensaje: "Pedido guardado correctamente"
+                mensaje: "Pedido guardado correctamente",
+                idSQLite: this.lastID
             });
 
         }
@@ -133,6 +134,53 @@ app.post("/pedido", (req, res) => {
 
 });
 console.log("SERVER VERSION NUEVA");
+
+
+// ACTUALIZAR ESTADO DEL PEDIDO
+
+app.put("/pedido/:id", (req, res) => {
+
+    const { id } = req.params;
+    const { estado } = req.body;
+
+    console.log("ACTUALIZANDO ID:", id);
+    console.log("NUEVO ESTADO:", estado);
+
+    db.run(
+
+        `UPDATE pedidos
+         SET estado = ?
+         WHERE id = ?`,
+
+        [estado, id],
+
+        function(err){
+
+            if(err){
+
+                console.log(err);
+
+                return res.status(500).json({
+                    mensaje: "Error al actualizar estado"
+                });
+
+            }
+
+            console.log(
+                "FILAS ACTUALIZADAS:",
+                this.changes
+            );
+
+            res.json({
+                mensaje: "Estado actualizado"
+            });
+
+        }
+
+    );
+
+});
+
 
 app.listen(3000, () => {
 
